@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: #e0c3fc;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    width: 30vw;
+    height: 70vh;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 25px;
+    border-bottom: 1px solid #ccc;
+    padding: 30px 0;
+}
+
+.tarefa-nova {
+    padding: 30px;
+    border: none;
+}
+
+.btn-adicionar {
+    border: none;
+    background-color: #ba7af8;
+    padding: 12px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.btn-excluir {
+    border: none;
+}
+
+.botoes-lista {
+    display: none;
+}
+
+/* .botoes-lista-estilo {
+    display: inline-block;
+} */
+
+

@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>To Do List</title>
 </head>
 <body>
-    <main>
+    <main class="container">
         <h1>Adicione uma nova tarefa</h1>
-        <input id="tarefaNova" type="text" placeholder="Digite aqui">
-        <button id="adicionarTarefa">Adicionar</button>
+        <input class="tarefa-nova" id="novaTarefa" type="text" placeholder="Digite aqui">
+        <button class="btn-adicionar" id="adicionarTarefa">Adicionar</button>
         <div>
             <ul id="listaTarefas"></ul>
+        </div>
+        <div id="botoesLista" class="botoes-lista">
+            <button id="selecionarTodas">Selecionar todas</button>
+            <button id="excluirTodas">Excluir todas</button>
         </div>
     </main>
     <script src="./script.js"></script>
