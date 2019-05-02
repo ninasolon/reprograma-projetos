@@ -6,21 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <title>To Do List</title>
+    <title>Lista de Tarefas</title>
 </head>
 <body>
     <main class="container">
-        <h1>Adicione uma nova tarefa</h1>
-        <input class="tarefa-nova" id="novaTarefa" type="text" placeholder="Digite aqui">
+        <h1>Lista de Tarefas</h1>
+        <input class="tarefa-nova" id="novaTarefa" type="text" placeholder="Digite uma nova tarefa">
         <button class="btn-adicionar" id="adicionarTarefa">Adicionar</button>
         <div>
             <ul id="listaTarefas"></ul>
+            <!-- <li draggable="true"></li> -->
         </div>
-        <div id="botoesLista" class="botoes-lista">
-            <button id="selecionarTodas">Selecionar todas</button>
-            <button id="excluirTodas">Excluir todas</button>
+        <div id="botoesLista" class="btn-lista">
+            <button id="marcarTodas" class="btn">Marcar todas</button>
+            <button id="excluirTodas" class="btn">Excluir todas</button>
         </div>
     </main>
     <script src="./script.js"></script>
 </body>
 </html>
+
