@@ -1,6 +1,3 @@
-//let ou const para o input?
-//pode criar variavel com o nome do id?
-
 let adicionarTarefa = document.getElementById("adicionarTarefa");
 let novaTarefa = document.getElementById("novaTarefa"); 
 
@@ -30,7 +27,6 @@ adicionarTarefa.addEventListener("click", function(){
        
         //mostrando botões da lista
         let botoesLista = document.getElementById("botoesLista");
-        // botoesLista.classList.remove("btn-lista")
         botoesLista.style.display = "block";
 
         //botão excluir todas as tarefas
@@ -39,8 +35,6 @@ adicionarTarefa.addEventListener("click", function(){
 
             listaTarefas.removeChild(itemLista);
             botoesLista.style.display = "none";
-            // botoesLista.classList.add("btn-lista"); // só funciona com classList.remove no evento anterior
-            // botoesLista.classList.toggle("botoes-lista-estilo")
         });
 
         //drag and drop
@@ -81,22 +75,27 @@ adicionarTarefa.addEventListener("click", function(){
     novaTarefa.value = "";
 });
 
+function varredura(checkbox) {
+   
+    // verifica se todos os checkbox estão marcados
+    let todosMarcados = true;
+    checkbox.forEach(function(item){
+        if (item.checked == false) {
+            todosMarcados = false;
+        }
+    })
+    return todosMarcados;
+}
+
 //botão selecionar todas as tarefas
 let marcarTodas = document.getElementById("marcarTodas");
 marcarTodas.addEventListener("click", function(){
 
     let checkbox = document.querySelectorAll(".checkbox")
-
-    // verifica se todos os checkbox estão marcados
-    let varredura = true;
-    checkbox.forEach(function(item){
-        if (item.checked == false) {
-            varredura = false;
-        }
-    })
+    const varredura1 = varredura(checkbox);
 
     //condição em que todos os checkbox estão marcados; ativa função desmarcar
-    if (varredura == true) {
+    if (varredura1 == true) {
         checkbox.forEach(function(item){
             item.checked = false;
             item.parentElement.classList.remove("item-riscado")
@@ -128,16 +127,10 @@ function selecionarTarefa(item){
     item.parentElement.classList.toggle("item-riscado");
 
     // alterar botão Marcar/Desmarcar
-    let checkbox = document.querySelectorAll(".checkbox")
-    let varredura = true;
+    let checkbox = document.querySelectorAll(".checkbox");
+    const varredura1 = varredura(checkbox);
 
-    checkbox.forEach(function(item){
-        if (item.checked == false) {
-            varredura = false;
-        }
-    })
-
-    if (varredura == true) {
+    if (varredura1 == true) {
         marcarTodas.textContent = "Desmarcar todas";
     }
 

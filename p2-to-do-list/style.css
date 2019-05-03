@@ -24,11 +24,12 @@ input, input::placeholder {
     text-align: center;
     background-color: white;
     width: 350px;
-    height: 80vh;
+    min-height: 80vh;
     margin: 10vh auto;
     display: flex;
     flex-direction: column;
     position: relative;
+    padding-bottom: 70px;
 }
 
 @media (max-width: 420px) {
@@ -85,7 +86,7 @@ p {
 
 .drag {
     font-weight: bold;
-    color: darkblue;
+    background-color: rgb(233, 233, 233);
 }
 
 .btn-excluir {
