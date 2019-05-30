@@ -1,0 +1,136 @@
+// o que vai no body
+// classes que serão repetidas tipo container
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: $font-padrao;
+    font-size: $font-size-padrao;
+    color: $cor-primaria;
+}
+
+.spanMarcaTexto{
+    position: relative;
+
+    .marcaTexto{
+        width: 100%;
+        display: inline-block;
+        background-color: $sublinhado;
+        height: 0.75rem;
+        position: absolute;
+        z-index: -1;
+        bottom: 0.25rem;
+    }
+}
+
+.spanMarcaTextoBold {
+    @media (max-width: $tablet-hor) {
+    font-weight: bold;
+    }
+
+    .marcaTextoBold {
+        @media (max-width: $tablet-hor) {
+            display: none;
+        }
+    }
+}
+
+.marcaTexto--roxo{
+    width: 100%;
+    display: inline-block;
+    background-color: $sublinhado-roxo;
+    opacity: 0.15;
+    height: 0.75rem;
+    position: absolute;
+    z-index: 1;
+    bottom: -0.25rem;
+}
+
+.tituloDestaque{
+    @include titulo($font-size-destaque);
+
+    @media (max-width: $tablet-hor){
+        font-size: $font-size-titulo;
+        font-weight: normal;
+    }
+}//titulo header
+
+.titulo{
+    @include titulo($font-size-titulo)
+}//demais titulos, excetos os cards
+
+.tituloSecundario{
+    @include titulo($font-size-secundario)
+}
+
+.tituloCard{
+    @include titulo($font-size-subtitulo);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.tituloNoticia{
+    @include titulo($font-size-texto);
+    font-weight: 500;
+
+    @media (max-width: $mobile){
+        font-size: $font-size-subtitulo;
+    }
+}
+
+li{
+    list-style: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;    
+    
+    @media (max-width: $mobile) {
+        width: 90%;
+        flex-wrap: wrap;       
+    }
+}
+
+.quemSomos, .cenarioContainer, .noticias, .footerBg, #oQueFazemos {
+    padding: 4rem 0;
+
+    @media (max-width: $mobile){
+        padding: 3rem 0;
+    }
+}
+
+.botaoTopo {
+    width: 3.125rem;
+    position: fixed;
+    right: 2.5rem;
+    top: 50%;
+    z-index: 100;
+    display: none;
+
+    @media (max-width: $tablet-hor) {
+        right: 1.6875rem;
+    }
+
+    @media (max-width: $tablet-ver) {
+        right: 0.9375rem;
+    }
+
+    @media (max-width: $mobile) {
+        top: 88%;
+        right: 1.5rem;
+        opacity: .6;
+    }
+}
+
+
+
+

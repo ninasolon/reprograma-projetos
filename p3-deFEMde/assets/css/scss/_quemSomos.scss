@@ -1,0 +1,70 @@
+.bgMain{
+    height: 25rem;
+    overflow: hidden;
+
+    img{
+        @media (max-width: $tablet-ver) {
+            height: 16rem;
+        }
+    }
+}
+
+.containerQuemSomos--flex{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: -10rem;
+    z-index: 8;
+    @include flex(flex-start, space-between);
+    position: relative;
+    
+    @media (max-width: $tablet-ver){
+        margin-top: -16rem;
+        flex-direction: column;
+    }
+
+    @media (max-width: $mobile) {
+        width: 90%;
+        flex-wrap: wrap;       
+    }
+
+    .cardMain{    
+        width: 45%;
+        min-height: 26.125rem;
+        background-color: $branco;
+        padding: 2.8rem;
+        border-radius: 0.25rem;
+        box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.16);
+        z-index: -2;
+
+        @media (max-width: $tablet-hor){
+            min-height: 32rem;
+            width: 48%;
+        }
+
+        @media (max-width: $tablet-ver){
+            width: 100%;
+            min-height: 22rem;
+        }
+
+        h2{
+            margin: 0;
+        }
+        
+        p{
+            font-size: 1.25rem;
+            line-height: 1.5;
+            margin: 0;
+            margin-top: 20px;
+
+            .span--bold{
+                font-weight:bold;
+            }
+        }
+    }
+
+    .cardMain + .cardMain {
+        @media (max-width: $tablet-ver) {
+            margin-top: 2rem;
+        }
+    }
+}

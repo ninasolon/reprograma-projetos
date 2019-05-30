@@ -1,0 +1,119 @@
+.oQueFazemos {
+    background-image: url(../img/img-oQueFazemos.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 31.25rem;
+
+    .containerSection{
+        margin: 0 auto;
+        width: 80%;
+        @include flex(center, flex-end);
+    
+        // // 768px
+        @media(max-width:$tablet-ver){
+            @include flex(center, center);
+        }
+    
+        .containerDiv--card{
+            @include flex(left, space-between);
+            flex-direction: column;
+            // margin: 4.1875rem 0;
+            // min-height: 22.875rem;
+            margin: 10% 0;
+            min-height: 80%;
+            width: 50%;
+            opacity: 0.85;
+            border: solid 1px #f2f2f2;
+            background-color: #ffffff;
+            padding: 2.8rem;
+        
+            // // 768px
+            @media(max-width:$tablet-ver){
+                width: 80%;
+            }
+        
+            // 420px
+            @media(max-width:$mobile){
+                width: 100%;
+                padding: 1.8rem;
+            }   
+
+            .conteudo--oQueFazemos{
+                font-size: 1.25rem;
+                line-height: 1.5;
+            }
+            
+            .botao--oQueFazemos{
+                @extend %botao;
+                width: 7.3125rem;
+            }
+        }
+    }
+}
+
+.container--oQueFazemos{
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 4rem;
+
+    // 768px
+    @media(max-width:$tablet-hor){
+        width: 100%;
+    }
+
+    .containerDiv--projetos{
+        width: 80%;
+        margin: 0 auto;
+        @include flex(left, left);
+        flex-direction: column;
+        border-radius: 0.25rem;
+        box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.16);
+        margin-bottom: 1.925rem;
+        z-index: -1;
+        transition: 0.5s transform ease;
+        transform: scale(1);
+        cursor: pointer;
+        padding: 1rem 2.8rem 1.8rem 2.8rem;
+    
+        // // 420px
+        @media(max-width:$mobile){
+            width: 90%;
+            padding: 0.8rem 1.5rem 1.5rem 1.5rem;
+        }
+
+        .tituloSecundario--oQueFazemos{
+            @include titulo($font-size-secundario);
+            font-weight: normal;
+            cursor: pointer;
+        
+            // 1024px
+            @media(max-width:$tablet-hor){
+                @include titulo(1.5rem);
+                font-weight: 500;
+            }
+        }
+
+        .conteudoSecundario{
+            margin: 1.8rem 0 1rem 0;
+            width: 100%;
+            font-size: $font-size-subtitulo;
+            font-weight: lighter;
+            display:none;
+            color: $cor-primaria;
+            z-index: -1;
+        
+            .conteudoSecundario:hover{
+                color: $cor-primaria;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.containerDiv--projetos:hover{
+    transform: scale(1.02);
+}
+
+#paragrafoAdvocacy{
+    display:block;
+}
