@@ -36,6 +36,11 @@
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+.busca--container__home{
+  @include flex(center, none);
+  flex-direction: column;
+}
+
 .conteudo {
   @include flex(center, space-evenly);
 }

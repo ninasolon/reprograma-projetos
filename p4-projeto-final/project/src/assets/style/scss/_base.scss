@@ -54,3 +54,7 @@ section {
   filter: grayscale(60%);
   opacity: .4;
 }
+
+button:focus {
+  outline: 0;
+}

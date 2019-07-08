@@ -1,6 +1,4 @@
-.busca--container {
-  // padding-left: 150px;
-  // width: 40%;
+.busca--campos {
   @include flex(center, none);
   flex-direction: column;
 
@@ -34,6 +32,10 @@
     color: #575757;
     border-radius: 3px;
     cursor: pointer;
+  }
+
+  .busca--btn:focus{
+    outline: 0;
   }
 }
 

@@ -48,6 +48,12 @@ export default class Textos extends Component {
     }
   }
 
+  verTodos = () => {
+    this.setState({
+      article: <ListaCompleta click={this.linkTexto} array={dataTextos}/>
+    })
+  }
+
   render() {
     return (
       <div>
@@ -55,12 +61,16 @@ export default class Textos extends Component {
         <div className='container textos'>
           <h2>{"< textos traduzidos />"}</h2>
           <div className='textos--container'>
-            <Busca 
-              classe='busca--container busca--inline'
-              click={this.filtrarTextos}
-              refBusca={(e) => this.inputBusca = e}
-              refCategoria={(e) => this.inputCategoria = e}
-            />
+            <div className='busca--container__textos'>
+              <Busca 
+                classe='busca--campos busca--inline'
+                click={this.filtrarTextos}
+                refBusca={(e) => this.inputBusca = e}
+                refCategoria={(e) => this.inputCategoria = e}
+                verTodos={this.verTodos}
+              />
+              <button onClick={this.verTodos}>Ver todos os textos</button>
+            </div>
             <div className='textos--article'>{this.state.article}</div>
           </div>
         </div>

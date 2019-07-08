@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 
 export default class Busca extends Component{
   render(){
@@ -17,7 +17,6 @@ export default class Busca extends Component{
           <option value='api'>API</option>
         </select>
         <input type='submit' value='Pesquisar' className='busca--btn'></input>
-        <Link to='/textos'>Ver todos os textos</Link>
       </form>
     )
   }

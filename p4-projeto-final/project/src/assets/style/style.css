@@ -57,6 +57,10 @@ section {
   opacity: .4;
 }
 
+button:focus {
+  outline: 0;
+}
+
 nav {
   background-color: #FFF;
   padding: 20px 0;
@@ -131,7 +135,7 @@ footer a {
   color: #a3a3a3;
 }
 
-.busca--container {
+.busca--campos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,11 +151,11 @@ footer a {
           flex-direction: column;
 }
 
-.busca--container h3 {
+.busca--campos h3 {
   margin: 20px;
 }
 
-.busca--container .busca--input {
+.busca--campos .busca--input {
   width: 280px;
   border: 1px solid #ccc;
   border-radius: 13px;
@@ -159,7 +163,7 @@ footer a {
   padding: 5px;
 }
 
-.busca--container select {
+.busca--campos select {
   width: 280px;
   padding: 5px;
   border: 1px solid #ccc;
@@ -167,7 +171,7 @@ footer a {
   font-size: 14px;
 }
 
-.busca--container .busca--btn {
+.busca--campos .busca--btn {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   margin: 23px 0;
@@ -177,6 +181,10 @@ footer a {
   color: #575757;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.busca--campos .busca--btn:focus {
+  outline: 0;
 }
 
 .busca--inline {
@@ -240,6 +248,22 @@ footer a {
   padding: 40px;
   -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.busca--container__home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .conteudo {
@@ -321,6 +345,32 @@ footer a {
 
 .item-lista:hover {
   color: rgba(0, 0, 0, 0.6);
+}
+
+.busca--container__textos {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+
+.busca--container__textos button {
+  border: none;
+  background: transparent;
+  color: #63667e;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+.busca--container__textos button:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .dicio--container {
