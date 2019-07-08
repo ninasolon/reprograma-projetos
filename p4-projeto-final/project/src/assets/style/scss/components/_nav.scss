@@ -1,0 +1,35 @@
+nav {
+  background-color: #FFF;
+  padding: 20px 0;
+
+  p {
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 10px;
+    }
+    
+    .navmenu--link:hover{
+      color: #6B72B0;
+      // color: #3C4063;
+    }
+
+    .navmenu--colabore{
+      color: #6B72B0;
+    }
+
+    .navmenu--colabore:hover{
+      color: #3C4063;
+      font-weight: bold;
+    }
+  }
+}

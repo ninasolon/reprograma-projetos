@@ -1,0 +1,36 @@
+.dicio--container {
+  margin: 40px auto;
+  margin-bottom: 60px;
+
+  p {
+    text-align: center;
+  }
+
+  .dicio--tabela {
+    margin: 50px auto;
+    border-spacing: 0;
+
+    th, td {
+      min-width: 150px;
+      padding: 8px 20px;
+    }
+
+    th {
+      text-transform: uppercase;
+      padding-bottom: 20px;
+    }
+
+    td {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .significado {
+      color: rgba(0,0,0,.6);
+    }
+
+    i {
+      cursor: pointer;
+      margin-left: 15px;
+    }
+  }
+}

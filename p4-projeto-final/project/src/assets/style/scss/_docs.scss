@@ -1,0 +1,23 @@
+.docs--container {
+  margin: 40px auto;
+
+  .docs--descricao {
+    text-align: center;
+  }
+}
+
+.docs--lista {
+  margin: 50px 80px;
+
+  p{
+    margin: 10px;
+  }
+
+  li {
+    margin: 10px;
+  
+    a:hover{
+      text-decoration: underline;
+    }
+  }
+}

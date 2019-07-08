@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link href="https://fonts.googleapis.com/css?family=Cousine|Lato:300i,400|Raleway:400,600,700,800&display=swap"
+    rel="stylesheet">
+  <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/711fc5be61.js"></script>
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+</body>
+<script>
+  var quill = new Quill('#editor', {
+    modules: {
+      toolbar: [
+        [{ header: [1, 2, false] }],
+        ['bold', 'italic', 'underline'],
+        ['image', 'code-block']
+      ]
+    },
+    placeholder: 'Compose an epic...',
+    theme: 'snow'
+  });
+</script>
+</html>
+
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe est, modi odit repellat quasi ea vero minima, beatae quo dolorum, magnam soluta itaque enim ut tempora labore commodi? Voluptate, laborum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci id maiores, quisquam accusamus perspiciatis ad dolores iusto doloremque similique fugit saepe consequatur alias, tempora voluptates nulla doloribus eaque laborum asperiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptate dolore error reprehenderit maiores eligendi enim libero iusto quas, quaerat omnis dolorum iure aspernatur accusantium, nihil quae facilis expedita nemo? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam aliquid accusantium aut repellendus nemo eum dolore deleniti eveniet. Tenetur, accusamus. Nostrum rerum, ipsa sequi autem minima quo error eius assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa illo corrupti tempora quam enim possimus quisquam quia perferendis. Iste nihil, quod quam quidem distinctio doloremque aut minima harum est nobis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium cum voluptatibus vero quae nemo a iste quisquam illum sapiente maxime ad, in suscipit illo natus, id impedit ea eligendi at. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dignissimos veritatis accusamus assumenda quia cum, at quas dolor sint sed culpa repellendus repellat soluta voluptatibus a? Officia fugiat culpa assumenda? -->

@@ -1,0 +1,17 @@
+// base
+@import 'scss/variables';
+// @import 'scss/extend';
+@import 'scss/mixins';
+@import 'scss/base';
+
+// componentes
+@import 'scss/components/nav';
+@import 'scss/components/contato';
+@import 'scss/components/footer';
+@import 'scss/components/busca';
+
+//paginas
+@import 'scss/home';
+@import 'scss/textos';
+@import 'scss/dicionario';
+@import 'scss/docs';
