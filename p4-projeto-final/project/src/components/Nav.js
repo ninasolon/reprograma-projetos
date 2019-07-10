@@ -5,13 +5,13 @@ export default function Nav(){
   return(
     <nav>
       <div className='container nav'>
-        <div>
-          <h1>teta colab</h1>
-          <p>tradução em tecnologia e afins</p>
-        </div>
+        <Link to='/'>
+          <h1>debug</h1>
+          <p>tradução colaborativa em tecnologia</p>
+        </Link>
         <ul>
           <li className='navmenu--link'><Link to='/'>home</Link></li>
-          <li className='navmenu--link'><Link to='/textos'>textos</Link></li>
+          <li className='navmenu--link'><Link to='/busca'>artigos</Link></li>
           <li className='navmenu--link'><Link to='/dicionario'>dicionário</Link></li>
           <li className='navmenu--link'><Link to='/documentacoes'>documentações</Link></li>
           <li><a href='#contato' className='navmenu--colabore'>colabore</a></li>

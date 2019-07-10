@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 export default function ListaDocs(){
   return(
-    <Fragment>
+    <ul>
       <li>Bootstrap</li>
-      <li>MDN</li>
-      <li>React</li>
       <li>Node.js</li>
-    </Fragment>
+      <li>React</li>
+      <li>Yarn</li>
+    </ul>
   )
 }

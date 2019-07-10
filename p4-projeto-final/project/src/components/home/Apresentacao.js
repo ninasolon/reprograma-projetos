@@ -3,9 +3,9 @@ import React from 'react'
 export default function Apresentacao(){
   return(
     <div className='apres--container'>
-      <h2>{"< conheça a "}<span>teta colab</span>{" />"}</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium obcaecati voluptatum, ad tenetur placeat sed. Saepe, accusantium vero. Sint nam voluptatem totam ullam officia odio amet laboriosam possimus vel. Atque!</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium obcaecati voluptatum, ad tenetur placeat sed. Saepe, accusantium vero. Sint nam voluptatem totam ullam officia odio amet laboriosam possimus vel. Atque!</p>
+      <h2>{"< conheça o "}<span className='apres--logo'>debug</span>{" />"}</h2>
+      <p>Um site que reúne conteúdo sobre tecnologia traduzido para português. A proposta é engajar pessoas na tradução de artigos e documentações, ampliando o acesso ao conhecimento.</p>
+      <p>Existe um grande volume de informação disponível somente em inglês na internet, mas sabemos que o idioma não deve ser uma barreira para estudar programação. Veja como <a href='#contato'>colaborar</a>!</p>
     </div>
   )
 }

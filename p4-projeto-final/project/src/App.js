@@ -1,16 +1,15 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import './assets/style/style.css'
-// import './App.css'
 
-//pages
+//paginas
 import Home from './pages/Home'
-import Textos from './pages/Textos'
+import Busca from './pages/Busca'
 import Dicionario from './pages/Dicionario'
 import Docs from './pages/Docs'
-import EditorTexto from './pages/EditorTexto'
+import Artigo from './pages/Artigo'
 
-//components
+//componentes
 import Nav from './components/Nav'
 import Contato from './components/Contato'
 import Footer from './components/Footer'
@@ -21,10 +20,10 @@ export default function App() {
       <div>
         <Nav />
         <Route path='/' exact component={Home} />
-        <Route path='/textos' component={Textos} />
+        <Route path='/busca' component={Busca} />
         <Route path='/dicionario' component={Dicionario} />
         <Route path='/documentacoes' component={Docs} />
-        <Route path='/editor' component={EditorTexto} />
+        <Route path='/artigo/:id' component={Artigo} />
         <Contato />
         <Footer />
       </div>

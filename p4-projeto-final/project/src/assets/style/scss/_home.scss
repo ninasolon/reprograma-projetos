@@ -1,7 +1,5 @@
 .home {
   a {
-    // color: lightslategray;
-    // color: #6B72B0;
     color: #63667e;
   }
 
@@ -10,13 +8,13 @@
   }
 
   p {
-    margin: 10px;
+    margin: 10px 0;
+    line-height: 1.5rem;
   }
 }
 
 .header {
   padding: 60px 0;
-  // background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0) 10%), url('../img/bg-code.jpg');
   background-image: url('../img/bg-code.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,11 +27,20 @@
 }
 
 .apres--container {
-  width: 40%;
+  width:40%;
   text-align: center;
   background-color: #fff;
-  padding: 40px;
+  padding: 40px 30px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+  .apres--logo{
+    font-family: 'Special Elite', cursive;
+    font-size: 26px;
+  }
+
+  p{
+    margin-top: 15px;
+  }
 }
 
 .busca--container__home{
@@ -46,11 +53,8 @@
 }
 
 .conteudo--container {
-  width: 33%;
-  // border: 1px solid #ccc;
-  // box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);  
-  padding: 20px;
-  min-height: 300px;
+  width: 30%;
+  min-height: 280px;
   @include flex(center, none);
   flex-direction: column;
   position: relative;
@@ -67,5 +71,14 @@
     margin: 0 auto;
     position: absolute;
     bottom: 20px;
+  }
+
+  .conteudo--dicio{
+    // text-align: center;
+    // margin-left: 20px;
+
+    span{
+      color: rgba(0, 0, 0, 0.5);
+    }
   }
 }

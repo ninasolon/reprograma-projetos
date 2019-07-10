@@ -29,6 +29,11 @@ const dataDicionario = [
     palavraPort: 'Dados',
     significado: '<DATA>Lorem ipsum dolor sit amet consectetur adipisicing elit',
   },
+  {
+    palavraIng: 'Target',
+    palavraPort: 'Alvo',
+    significado: '<TARGET>Lorem ipsum dolor sit amet consectetur adipisicing elit',
+  },
 ]
 
 export default dataDicionario

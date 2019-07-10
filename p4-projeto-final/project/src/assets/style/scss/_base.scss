@@ -4,12 +4,21 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Lato', sans-serif;
 }
 
 h1 {
-  font-family: 'Cousine', monospace;
+  font-size: 28px;
+  font-family: 'Special Elite', cursive;
+  // font-family: 'Cousine', monospace;
+  // font-family: 'Coda', cursive;
+  // font-family: 'Averia Libre', cursive;
+  // font-family: 'Cherry Swash', cursive;
 }
 
 h2 {
@@ -22,9 +31,9 @@ h2, h3 {
   text-align: center;
   margin-bottom: 20px;
 
-  span {
-    font-weight: bold;
-  }
+  // span {
+  //   font-weight: bold;
+  // }
 }
 
 a {
@@ -38,7 +47,7 @@ section {
 
 .container {
   margin: 0 auto;
-  width: 80%;
+  width: 75%;
 }
 
 .small-container {

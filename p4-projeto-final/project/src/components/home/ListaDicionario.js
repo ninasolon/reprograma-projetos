@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 export default function ListaDicionario(){
   return(
-    <Fragment>
-      <li>Header: cabeçalho</li>
-      <li>Hello, world: olá, mundo</li>
-      <li>Value: valor</li>
-      <li>Odd/even: ímpar/par</li>
-    </Fragment>
+    <ul className='conteudo--dicio'>
+      <li>header | <span>cabeçalho</span></li>
+      <li>odd/even | <span>ímpar/par</span></li>
+      <li>print | <span>imprimir</span></li>
+      <li>tag | <span>etiqueta</span></li>
+    </ul>
   )
 }

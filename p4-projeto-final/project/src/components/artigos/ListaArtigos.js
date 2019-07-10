@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-export default class ListaCompleta extends Component{
+export default class ListaArtigos extends Component{
   ordenarAZ = (itemA, itemB, props) => {
     if (itemA[props].toLowerCase() < itemB[props].toLowerCase()){
       return -1
@@ -12,12 +13,14 @@ export default class ListaCompleta extends Component{
 
   render(){
     const listaOrdenada = (this.props.array).sort((itemA, itemB) => this.ordenarAZ(itemA, itemB, 'titulo'))
-    return(
+    return (
       listaOrdenada.map((item) => (
-        <div onClick={this.props.click} className='item-lista'>
+      <Link to={`/artigo/${item.index}`}>
+        <div className='item-lista'>
           <h4>{item.titulo}</h4>
-          <p>Autoria: {item.autoria}</p>
+          <p>Autor(a): {item.autoria}</p>
         </div>
+      </Link>
       ))
     )
   }

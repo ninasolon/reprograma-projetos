@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-// import { Link } from "react-router-dom"
 
-export default class Busca extends Component{
+export default class CampoBusca extends Component{
   render(){
     return(
-      <form className={this.props.classe} onSubmit={this.props.click}>
+      <form className={this.props.classe} onSubmit={this.props.btnBusca}>
         <h3>busca por palavra-chave</h3>
         <input type='text' className='busca--input' id='busca' ref={this.props.refBusca}></input>
         <h3>ou categoria</h3>

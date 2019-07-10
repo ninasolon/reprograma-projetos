@@ -1,8 +1,9 @@
 .dicio--container {
   margin: 40px auto;
   margin-bottom: 60px;
+  width: 75%;
 
-  p {
+  .dicio--descricao {
     text-align: center;
   }
 
@@ -18,6 +19,10 @@
     th {
       text-transform: uppercase;
       padding-bottom: 20px;
+
+      span {
+        cursor: pointer;
+      }
     }
 
     td {
@@ -29,7 +34,6 @@
     }
 
     i {
-      cursor: pointer;
       margin-left: 15px;
     }
   }

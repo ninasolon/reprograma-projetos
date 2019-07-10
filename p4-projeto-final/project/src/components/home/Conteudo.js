@@ -7,7 +7,7 @@ export default function Conteudo(props){
       <h2>{props.secao}</h2>
       <div>
         <p>{props.descricao}</p>
-        <ul>{props.lista}</ul>
+        {props.lista}
       </div>
       <Link to={props.link}>Ver tudo</Link>
     </div>

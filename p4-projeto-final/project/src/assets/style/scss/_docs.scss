@@ -7,17 +7,17 @@
 }
 
 .docs--lista {
-  margin: 50px 80px;
+  margin: 50px 20px;
 
   p{
-    margin: 10px;
+    margin: 10px 0;
   }
 
   li {
-    margin: 10px;
+    margin: 10px 0;
   
-    a:hover{
-      text-decoration: underline;
+    a:hover {
+      color: #63667e;
     }
   }
 }

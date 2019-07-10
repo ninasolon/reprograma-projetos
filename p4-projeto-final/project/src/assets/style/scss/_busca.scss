@@ -1,28 +1,26 @@
-.textos {
+.busca {
   margin: 40px auto;
 }
 
-.textos--container{
-  @include flex(none, none);
-  flex-direction: column;
-}
-
-.textos--article {
-  margin: 40px auto;
-  width: 80%;
+.artigos--container {
+  margin: 40px 0;
 }
 
 .item-lista {
-  width: 300px;
+  // font-family: 'PT Serif', serif;
   margin-bottom: 20px;
-  cursor: pointer;
+
+  p{
+    font-size: 15px;
+    margin: 5px 0;
+  }
 }
 
 .item-lista:hover{
   color: rgba(0,0,0,.6);
 }
 
-.busca--container__textos{
+.busca--container__artigos{
   margin: 0 auto;
   @include flex(center, none);
 
@@ -31,7 +29,7 @@
     background: transparent;
     color: #63667e;
     font-family: 'Lato', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
   }
 
   button:hover {

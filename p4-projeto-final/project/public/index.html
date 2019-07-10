@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link href="https://fonts.googleapis.com/css?family=Cousine|Lato:300i,400|Raleway:400,600,700,800&display=swap"
-    rel="stylesheet">
-  <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cousine|Lato:300i,400|Raleway:400,600,700,800|PT+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Averia+Libre|Cherry+Swash|Coda|Special+Elite&display=swap" rel="stylesheet">
+  <!-- <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet"> -->
   <script src="https://kit.fontawesome.com/711fc5be61.js"></script>
-  <title>React App</title>
+  <title>Debug</title>
 </head>
 
 <body>
@@ -19,18 +19,68 @@
   <div id="root"></div>
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 </body>
+
+<!-- quill -->
 <script>
-  var quill = new Quill('#editor', {
-    modules: {
-      toolbar: [
-        [{ header: [1, 2, false] }],
-        ['bold', 'italic', 'underline'],
-        ['image', 'code-block']
-      ]
-    },
-    placeholder: 'Compose an epic...',
-    theme: 'snow'
-  });
+  // var quill = new Quill('#editor', {
+  //   modules: {
+  //     toolbar: [
+  //       [{ header: [1, 2, 3, false] }],
+  //       ['bold', 'italic', 'underline', { 'color': [] }],
+  //       ['image', 'code-block', 'link']
+  //     ]
+  //   },
+  //   scrollingContainer: '#scrolling-container', 
+  //   placeholder: 'Compose an epic...',
+  //   theme: 'snow'
+  // });
+
+  // quill.on('text-change', update);
+  // var container = document.querySelector('#delta-container');
+  // update();
+
+  // function update(delta) {
+  //   var contents = quill.getContents();
+  //   console.log('contents', contents);
+  //   var html = "contents = " + JSON.stringify(contents, null, 2);
+  //   if (delta) {
+  //     console.log('change', delta)
+  //     html = "change = " + JSON.stringify(delta, null, 2) + "\n\n" + html;
+  //   }
+  //   container.innerHTML = html;
+  //   hljs.highlightBlock(container);
+  // }
+
+  // fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@debugtraducao')
+  //  .then((res) => res.json())
+  //  .then((data) => {
+  //     // Fillter the array
+  //     const res = data.items //This is an array with the content. No feed, no info about author etc..
+  //     const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
+
+  //     let output = '';
+  //     posts.forEach((item) => {
+  //        output += `
+  //        <li class="blog__post">
+  //           <a href="${item.link}">
+  //             //  <img src="${item.thumbnail}" class="blog__topImg"></img>
+  //              <div class="blog__content">
+  //                 <div class="blog_preview">
+  //                    <h2 class="blog__title">${item.title}</h2>
+  //                    <div class="blog__intro">${item.content}</div>
+  //                 </div>
+  //                 <hr>
+  //                 // <div class="blog__info">
+  //                 //    <span class="blog__author">${item.author}</span>
+  //                 //    <span class="blog__date">${shortenText(item.pubDate,0 ,10)}</span>
+  //                 // </div>
+  //              </div>
+  //           <a/>
+  //        </li>`
+  //     })
+  //     document.querySelector('#texto-medium').innerHTML = output
+    }
+
 </script>
 </html>
 

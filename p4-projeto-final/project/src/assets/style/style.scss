@@ -1,6 +1,5 @@
 // base
 @import 'scss/variables';
-// @import 'scss/extend';
 @import 'scss/mixins';
 @import 'scss/base';
 
@@ -8,10 +7,12 @@
 @import 'scss/components/nav';
 @import 'scss/components/contato';
 @import 'scss/components/footer';
-@import 'scss/components/busca';
+@import 'scss/components/campoBusca';
+@import 'scss/components/cta';
 
 //paginas
 @import 'scss/home';
-@import 'scss/textos';
+@import 'scss/artigo';
 @import 'scss/dicionario';
 @import 'scss/docs';
+@import 'scss/busca';
