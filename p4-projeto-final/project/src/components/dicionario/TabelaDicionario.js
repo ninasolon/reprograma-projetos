@@ -37,7 +37,7 @@ export default class TabelaDicionario extends Component {
           <tr>
             <th><span onClick={this.ordenarIng}>Inglês<i className="fas fa-sort-alpha-down"></i></span></th>
             <th><span onClick={this.ordenarPort}>Português<i className="fas fa-sort-alpha-down"></i></span></th>
-            <th>Significado</th>
+            <th className='th--significado'>Significado</th>
           </tr>
         </thead>
         <tbody>

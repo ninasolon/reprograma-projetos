@@ -19,8 +19,16 @@
     background-position: -800px;
     opacity: .9;
 
+    @media (max-width:$tablet-ver){
+      background-position: center;
+    }
+
     .header--dflex {
       @include flex(center, space-around, row);
+
+      @media (max-width:$tablet-ver){
+        flex-direction: column;
+      }
 
       .apres--container {
         width: 40%;
@@ -28,6 +36,15 @@
         background-color: $color-bg;
         padding: 40px 30px;
         box-shadow: $box-shadow;
+
+        @media (max-width:$tablet-ver){
+          width: 60%;
+          padding: 30px;
+        }
+
+        @media (max-width:$mobile){
+          width: 100%;
+        }
       
         .apres--logo{
           font-family: $font-logo;
@@ -41,6 +58,18 @@
 
       .busca--container__home{
         @include flex(center, none, column);
+
+        @media (max-width:$tablet-ver){
+          background-color: $color-bg;
+          width: 60%;
+          padding: 30px 0;
+          box-shadow: $box-shadow;
+          margin-top: 40px;          
+        }
+
+        @media (max-width:$mobile){
+          width: 100%;
+        }
       
         .busca--campos {
           @include flex(center, none, column);
@@ -70,11 +99,29 @@
   .conteudo {
     @include flex(center, space-evenly, row);
 
+    @media (max-width:$tablet-ver){
+      flex-direction: column;
+    }
+
     .conteudo--container {
       width: 30%;
       min-height: 280px;
       @include flex(center, none, column);
       position: relative;
+
+      @media (max-width:$tablet-ver){
+        width: 60%;
+      }
+
+      @media (max-width:$mobile){
+        width: 80%;
+      }
+
+      p{
+        @media (max-width:$tablet-ver){
+          text-align: center;
+        }
+      }
     
       ul {
         margin-bottom: 20px;
@@ -94,6 +141,12 @@
         span{
           color: $color-secondary;
         }
+      }
+    }
+
+    .conteudo--container + .conteudo--container{
+      @media (max-width:$tablet-ver){
+        margin-top: 30px;
       }
     }
   }

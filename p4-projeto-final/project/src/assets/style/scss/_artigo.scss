@@ -36,6 +36,10 @@
   
       img {
         width: 80%;
+
+        @media (max-width:$tablet-ver){
+          width: 100%;
+        }
       }
   
       figcaption{

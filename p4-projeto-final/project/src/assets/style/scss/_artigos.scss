@@ -3,13 +3,25 @@
   .busca--container__artigos{
     margin: 0 auto;
     @include flex(center, center, row);
+
+    @media (max-width:$tablet-ver){
+      flex-direction: column;
+    }
   
     .busca--form {
       font-size: 13px;
       @include flex(center, none, row);
     
+      @media (max-width:$tablet-ver){
+        flex-direction: column;
+      }
+
       h3 {
         margin: 20px;
+
+        @media (max-width:$tablet-ver){
+          margin: 10px;
+        }
       }
     
       .busca--input {
@@ -20,6 +32,10 @@
         border: $border;
         border-radius: 13px;
         padding: 5px 15px;
+
+        @media (max-width:$tablet-ver){
+          margin-right: 0;
+        }
     
         input{
           border: none;
@@ -54,6 +70,10 @@
         border: $border;
         border-radius: 13px;
         font-size: 14px;
+
+        @media (max-width:$tablet-ver){
+          width: 250px;
+        }
       }
     
       select:focus{
@@ -67,6 +87,10 @@
       color: $color-link;
       font-family: 'Lato', sans-serif;
       font-size: 15px;
+
+      @media (max-width:$tablet-ver){
+        margin-top: 25px;
+      }
     }
   
     .btn--vertodos:hover {

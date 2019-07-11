@@ -11,6 +11,15 @@
     th, td {
       min-width: 150px;
       padding: 8px 20px;
+
+      @media (max-width:$tablet-hor){
+        min-width: unset;
+        padding: 8px 10px;
+      }
+
+      @media (max-width:$tablet-ver){
+        padding: 8px 5px;
+      }
     }
 
     th {
@@ -19,6 +28,10 @@
 
       i {
         margin-left: 15px;
+
+        @media (max-width:$tablet-hor){
+          margin-left: 5px;
+        }
       }
 
       span {
@@ -30,8 +43,18 @@
       border-bottom: $border;
     }
 
+    .th--significado{
+      @media (max-width:$mobile){
+        display: none;
+      }
+    }
+
     .significado {
       color: $color-secondary;
+
+      @media (max-width:$mobile){
+        display: none;
+      }
     }
   }
 }

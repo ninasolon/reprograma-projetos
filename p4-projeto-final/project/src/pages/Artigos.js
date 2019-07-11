@@ -127,7 +127,6 @@ export default class Artigos extends Component {
           article: < CtaSemResultado />,
         })
         document.getElementById('resultadoBusca').innerText = `${filtroBusca.length} resultado(s) para "${busca.palavra}"`
-        // document.getElementById('resultadoBusca').innerText = ''
       }
 
       this.setState({

@@ -36,10 +36,18 @@ body {
   
   .container {
     @include container(75%);
+
+    @media (max-width:$tablet-ver){
+      width: 90%;
+    }
   }
   
   .small-container {
     @include container(60%);
+
+    @media (max-width:$tablet-ver){
+      width: 90%;
+    }
   }
 
   .page-container{
@@ -53,6 +61,11 @@ body {
     background-position: center;
     filter: grayscale(60%);
     opacity: .4;
+
+    @media (max-width:$tablet-ver){
+      //arrumar background
+      display: none;
+    }
   }
   
   input:focus, select:focus, button:focus {

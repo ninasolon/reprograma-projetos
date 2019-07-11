@@ -4,27 +4,62 @@
   background-color: $color-bg;
   padding: 18px 0;
 
-  p {
-    font-weight: 300;
-    font-style: italic;
-  }
+  .navmenu{
+    p {
+      font-weight: 300;
+      font-style: italic;
+    }
 
-  li {
-    display: inline-block;
-    list-style: none;
-    margin: 0 10px;
-  }
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 10px;
+    }
+
+    @media (max-width:$tablet-ver){
+      display: none;
+    }
   
-  .navmenu--link:hover{
-    color: $light-purple;
+    .navmenu--link:hover{
+      color: $color-link;
+    }
+  
+    .navmenu--colabore{
+      color: $color-link;
+    }
+  
+    .navmenu--colabore:hover{
+      color: $color-title;
+      font-weight: bold;
+    }
   }
 
-  .navmenu--colabore{
-    color: $light-purple;
+  .navmenu--hamburguer {
+    display: none;
+    font-size: 36px;
+
+    @media (max-width:$tablet-ver){
+      display: block;
+    }
+  }
+}
+
+.dropdown-inativo {
+  display: none;
+}
+
+.dropdown-ativo {
+  display: block;
+  font-size: 18px;
+  list-style: none;
+  text-align: right;
+
+  .dropdown--link {
+    padding: 5px 0;
   }
 
-  .navmenu--colabore:hover{
-    color: $purple;
-    font-weight: bold;
+  .dropdown--colabore{
+    color: $color-link;
+    padding: 5px 0 10px 0;
   }
 }

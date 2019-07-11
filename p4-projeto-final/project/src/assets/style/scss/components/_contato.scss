@@ -5,9 +5,17 @@
   .contato--container{
     margin-top: 35px;
     @include flex(center, none, row);
+
+    @media (max-width:$tablet-ver){
+      flex-direction: column;
+    }
   
     .contato--flex {
       width: 50%;
+
+      @media (max-width:$tablet-ver){
+       width: 100%;
+      }
     }
   }
 }
