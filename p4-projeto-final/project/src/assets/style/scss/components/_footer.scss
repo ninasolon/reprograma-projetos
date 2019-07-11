@@ -1,12 +1,10 @@
 footer {
-  // background-color: #3C4063;
-  background-color: #575757;
+  background-color: $color-bg-footer;
   color: rgba(255, 255, 255, .8);
-  // color: black;
   text-align: center;
   padding: 5px 0;
 
   a {
-  color: rgb(163, 163, 163);
+    color: rgb(168, 168, 168);
   }
 }

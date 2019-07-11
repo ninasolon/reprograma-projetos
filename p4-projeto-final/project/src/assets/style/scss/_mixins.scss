@@ -1,5 +1,26 @@
-@mixin flex($align, $justify) {
+@mixin flex($align, $justify, $direction){
   display: flex;
   align-items: $align;
   justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin container($width){
+  margin: 0 auto;
+  width: $width;
+}
+
+@mixin title($color){
+  text-align: center;
+  font-family: $font-title;
+  font-weight: 600;
+  color: $color;
+  margin-bottom: 20px;
+}
+
+@mixin formInput($width, $fsize){
+  width: $width;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  font-size: $fsize;
 }

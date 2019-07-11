@@ -4,7 +4,7 @@ import './assets/style/style.css'
 
 //paginas
 import Home from './pages/Home'
-import Busca from './pages/Busca'
+import Artigos from './pages/Artigos'
 import Dicionario from './pages/Dicionario'
 import Docs from './pages/Docs'
 import Artigo from './pages/Artigo'
@@ -20,7 +20,7 @@ export default function App() {
       <div>
         <Nav />
         <Route path='/' exact component={Home} />
-        <Route path='/busca' component={Busca} />
+        <Route path='/artigos' component={Artigos} />
         <Route path='/dicionario' component={Dicionario} />
         <Route path='/documentacoes' component={Docs} />
         <Route path='/artigo/:id' component={Artigo} />

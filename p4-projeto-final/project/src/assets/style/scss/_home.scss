@@ -1,6 +1,6 @@
 .home {
   a {
-    color: #63667e;
+    color: $color-link;
   }
 
   a:hover {
@@ -11,74 +11,90 @@
     margin: 10px 0;
     line-height: 1.5rem;
   }
-}
 
-.header {
-  padding: 60px 0;
-  background-image: url('../img/bg-code.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: -800px;
-  opacity: .9;
-}
+  .header {
+    background-image: url('../img/bg-code.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -800px;
+    opacity: .9;
 
-.d-flex--header {
-  @include flex(center, space-around);
-}
+    .header--dflex {
+      @include flex(center, space-around, row);
 
-.apres--container {
-  width:40%;
-  text-align: center;
-  background-color: #fff;
-  padding: 40px 30px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      .apres--container {
+        width: 40%;
+        text-align: center;
+        background-color: $color-bg;
+        padding: 40px 30px;
+        box-shadow: $box-shadow;
+      
+        .apres--logo{
+          font-family: $font-logo;
+          font-size: 26px;
+        }
+      
+        p{
+          margin-top: 15px;
+        }
+      }
 
-  .apres--logo{
-    font-family: 'Special Elite', cursive;
-    font-size: 26px;
+      .busca--container__home{
+        @include flex(center, none, column);
+      
+        .busca--campos {
+          @include flex(center, none, column);
+        
+          h3 {
+            margin: 20px;
+          }
+        
+          input {
+            @include formInput(280px, $fsize-input);
+            padding: 5px 15px;
+          }
+        
+          select {
+            @include formInput(280px, $fsize-input);
+            padding: 5px;
+          }
+          
+          .busca--btn {
+            @extend %button;
+          }
+        }
+      }
+    }
   }
 
-  p{
-    margin-top: 15px;
-  }
-}
+  .conteudo {
+    @include flex(center, space-evenly, row);
 
-.busca--container__home{
-  @include flex(center, none);
-  flex-direction: column;
-}
+    .conteudo--container {
+      width: 30%;
+      min-height: 280px;
+      @include flex(center, none, column);
+      position: relative;
+    
+      ul {
+        margin-bottom: 20px;
 
-.conteudo {
-  @include flex(center, space-evenly);
-}
-
-.conteudo--container {
-  width: 30%;
-  min-height: 280px;
-  @include flex(center, none);
-  flex-direction: column;
-  position: relative;
-
-  ul {
-    margin-bottom: 20px;
-  }
-
-  li {
-    margin: 5px 0 5px 30px;
-  }
-
-  a{
-    margin: 0 auto;
-    position: absolute;
-    bottom: 20px;
-  }
-
-  .conteudo--dicio{
-    // text-align: center;
-    // margin-left: 20px;
-
-    span{
-      color: rgba(0, 0, 0, 0.5);
+        li {
+          margin: 5px 0 5px 30px;
+        }
+      }
+    
+      a{
+        margin: 0 auto;
+        position: absolute;
+        bottom: 20px;
+      }
+    
+      .conteudo--dicio{
+        span{
+          color: $color-secondary;
+        }
+      }
     }
   }
 }

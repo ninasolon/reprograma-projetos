@@ -1,23 +1,22 @@
-.docs--container {
-  margin: 40px auto;
+.docs {
 
   .docs--descricao {
     text-align: center;
   }
-}
 
-.docs--lista {
-  margin: 50px 20px;
-
-  p{
-    margin: 10px 0;
-  }
-
-  li {
-    margin: 10px 0;
+  .docs--lista {
+    margin: 50px 20px;
   
-    a:hover {
-      color: #63667e;
+    p{
+      margin: 10px 0;
+    }
+  
+    li {
+      margin: 10px 0;
+    
+      a:hover {
+        color: $color-link;
+      }
     }
   }
 }

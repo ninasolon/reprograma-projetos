@@ -1,0 +1,99 @@
+.artigos{
+
+  .busca--container__artigos{
+    margin: 0 auto;
+    @include flex(center, center, row);
+  
+    .busca--form {
+      font-size: 13px;
+      @include flex(center, none, row);
+    
+      h3 {
+        margin: 20px;
+      }
+    
+      .busca--input {
+        width: 250px;
+        font-size: 14px;
+        margin-right: 20px;
+        position: relative;
+        border: $border;
+        border-radius: 13px;
+        padding: 5px 15px;
+    
+        input{
+          border: none;
+          font-size: 14px;
+          width: 90%;
+        }
+    
+        input:focus{
+          outline: none;
+        }
+    
+        button{
+          position: absolute;
+          top: 0;
+          right: 15px;
+          outline: none;
+          border: none;
+          background-color: transparent;
+          margin-top: 4.5px;
+          cursor: pointer;
+    
+          i{
+            font-size: 18px;
+            color: rgb(184, 184, 184);
+          }
+        }
+      }
+    
+      select {
+        width: 200px;
+        padding: 5px;
+        border: $border;
+        border-radius: 13px;
+        font-size: 14px;
+      }
+    
+      select:focus{
+        outline: none;
+      }
+    }
+    
+    .btn--vertodos{
+      border: none;
+      background: transparent;
+      color: $color-link;
+      font-family: 'Lato', sans-serif;
+      font-size: 15px;
+    }
+  
+    .btn--vertodos:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .busca--resultado{
+    margin-top: 15px;
+    font-style: italic;
+  }
+
+  .artigos--container{
+    margin: 40px auto;
+  
+    .artigos--item {
+      margin-bottom: 25px;
+    
+      p{
+        font-size: $fsize-smaller;
+        margin: 5px 0;
+      }
+    }
+
+    .artigos--item:hover{
+      color: $color-secondary;
+    }
+  }
+}

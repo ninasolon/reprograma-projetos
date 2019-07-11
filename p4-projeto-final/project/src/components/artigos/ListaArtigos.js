@@ -16,9 +16,9 @@ export default class ListaArtigos extends Component{
     return (
       listaOrdenada.map((item) => (
       <Link to={`/artigo/${item.index}`}>
-        <div className='item-lista'>
+        <div className='artigos--item'>
           <h4>{item.titulo}</h4>
-          <p>Autor(a): {item.autoria}</p>
+          <p>{item.descricao}</p>
         </div>
       </Link>
       ))

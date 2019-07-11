@@ -1,64 +1,69 @@
 .artigo{
-  margin: 40px auto;
-}
+  margin-bottom: 60px;
 
-#texto-medium{
-  margin: 40px 0;
-  font-family: 'PT Serif', serif;
-
-  p {
-    margin: 20px 0;
-    line-height: 1.5rem;
-  }
-
-  h2{
-    margin-bottom: 40px;
-  }
-
-  h3{
-    margin: 30px 0;
-  }
-
-  h4{
-    margin-top: 40px;
-    font-size: 18px;
-  }
-
-  pre{
-    margin: 30px 40px;
-    padding: 20px;
-    background-color: rgb(230, 230, 230);
-    line-height: 1.25rem;
-  }
-
-  figure{
-    margin: 30px 0;
-    text-align: center;
-
-    img {
-      width: 80%;
+  .artigo--format{
+    margin: 40px 0;
+    font-family: $font-article;
+  
+    p {
+      margin: 20px 0;
+      line-height: 1.5rem;
+    }
+  
+    h2{
+      margin-bottom: 40px;
+    }
+  
+    h3{
+      margin: 30px 0;
+    }
+  
+    h4{
+      margin-top: 40px;
+      font-size: $fsize-article-subtitle;
+    }
+  
+    pre{
+      margin: 30px 40px;
+      padding: 20px;
+      background-color: $color-bg-code;
+      line-height: 1.25rem;
+    }
+  
+    figure{
+      margin: 30px 0;
+      text-align: center;
+  
+      img {
+        width: 80%;
+      }
+  
+      figcaption{
+        font-size: $fsize-input;
+        font-style: italic;
+      }
+    }
+  
+    li{
+      margin: 20px;
+    }
+  
+    a{
+      text-decoration: underline;
+    }
+    
+    a:hover{
+      color: $color-link;
     }
   }
-
-  li{
-    margin: 20px;
-  }
-
-  a{
-    // font-style: italic;
-    text-decoration: underline;
-  }
-  
-  a:hover{
-    color: #63667e;
-  }
 }
 
-.link--voltar{
-  color: #63667e;
+.link--voltar, .link--topo{
+  color: $color-link;
+  cursor: pointer;
 }
 
-.link--voltar:hover{
+.link--voltar:hover, .link--topo:hover{
   text-decoration: underline;
 }
 

@@ -1,5 +1,7 @@
-nav {
-  background-color: #FFF;
+.nav {
+  @include container(75%);
+  @include flex(center, space-between, row);
+  background-color: $color-bg;
   padding: 18px 0;
 
   p {
@@ -7,29 +9,22 @@ nav {
     font-style: italic;
   }
 
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+  }
+  
+  .navmenu--link:hover{
+    color: $light-purple;
+  }
 
-    li {
-      display: inline-block;
-      list-style: none;
-      margin: 0 10px;
-    }
-    
-    .navmenu--link:hover{
-      color: #6B72B0;
-      // color: #3C4063;
-    }
+  .navmenu--colabore{
+    color: $light-purple;
+  }
 
-    .navmenu--colabore{
-      color: #6B72B0;
-    }
-
-    .navmenu--colabore:hover{
-      color: #3C4063;
-      font-weight: bold;
-    }
+  .navmenu--colabore:hover{
+    color: $purple;
+    font-weight: bold;
   }
 }

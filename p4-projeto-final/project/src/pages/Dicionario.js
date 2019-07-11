@@ -12,7 +12,7 @@ export default class Dicionario extends Component{
     return(
       <div>
         < ImgHeader />
-        <div className='dicio--container'>
+        <div className='container page-container dicionario'>
           <h2>{"< dicionário />"}</h2>
           <p className='dicio--descricao'>Consulte a tradução e o significado de palavras frequentemente usadas em programação:</p>
           < TabelaDicionario />

@@ -1,3 +1,15 @@
+.home .header .header--dflex .busca--container__home .busca--campos .busca--btn {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  background-color: #ffde5d;
+  color: rgba(0, 0, 0, 0.75);
+  border: none;
+  border-radius: 3px;
+  padding: 7px 12px;
+  margin: 23px 0;
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,45 +22,55 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
 }
 
-h1 {
+body h1 {
+  font-family: "Special Elite", cursive;
   font-size: 28px;
-  font-family: 'Special Elite', cursive;
 }
 
-h2 {
-  color: #3C4063;
-}
-
-h2, h3 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
+body h2 {
   text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #3c4063;
   margin-bottom: 20px;
 }
 
-a {
+body h3 {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+body a {
   text-decoration: none;
   color: inherit;
 }
 
-section {
+body section, body header {
   padding: 60px 0;
 }
 
-.container {
+body .container {
   margin: 0 auto;
   width: 75%;
 }
 
-.small-container {
+body .small-container {
   margin: 0 auto;
   width: 60%;
 }
 
-.header-img {
+body .page-container {
+  padding: 40px 0;
+}
+
+body .header-img {
   height: 150px;
   background-image: url("../img/bg-code.jpg");
   background-size: cover;
@@ -58,21 +80,13 @@ section {
   opacity: .4;
 }
 
-button:focus {
+body input:focus, body select:focus, body button:focus {
   outline: 0;
 }
 
-nav {
-  background-color: #FFF;
-  padding: 18px 0;
-}
-
-nav p {
-  font-weight: 300;
-  font-style: italic;
-}
-
-nav .nav {
+.nav {
+  margin: 0 auto;
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,24 +96,35 @@ nav .nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #fff;
+  padding: 18px 0;
 }
 
-nav .nav li {
+.nav p {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.nav li {
   display: inline-block;
   list-style: none;
   margin: 0 10px;
 }
 
-nav .nav .navmenu--link:hover {
-  color: #6B72B0;
+.nav .navmenu--link:hover {
+  color: #63667e;
 }
 
-nav .nav .navmenu--colabore {
-  color: #6B72B0;
+.nav .navmenu--colabore {
+  color: #63667e;
 }
 
-nav .nav .navmenu--colabore:hover {
-  color: #3C4063;
+.nav .navmenu--colabore:hover {
+  color: #3c4063;
   font-weight: bold;
 }
 
@@ -108,7 +133,7 @@ nav .nav .navmenu--colabore:hover {
   background-color: #ffde5d;
 }
 
-.contato--container {
+.contato .contato--container {
   margin-top: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,9 +144,13 @@ nav .nav .navmenu--colabore:hover {
   -webkit-box-pack: none;
       -ms-flex-pack: none;
           justify-content: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.contato--flex {
+.contato .contato--container .contato--flex {
   width: 50%;
 }
 
@@ -133,87 +162,12 @@ footer {
 }
 
 footer a {
-  color: #a3a3a3;
-}
-
-.busca--campos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.busca--campos h3 {
-  margin: 20px;
-}
-
-.busca--campos .busca--input {
-  width: 280px;
-  border: 1px solid #ccc;
-  border-radius: 13px;
-  font-size: 14px;
-  padding: 5px 10px;
-}
-
-.busca--campos select {
-  width: 280px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 13px;
-  font-size: 14px;
-}
-
-.busca--campos .busca--btn {
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  margin: 23px 0;
-  padding: 7px 12px;
-  border: none;
-  background-color: #ffde5d;
-  color: #575757;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.busca--campos .busca--btn:focus {
-  outline: 0;
-}
-
-.busca--inline {
-  font-size: 13px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.busca--inline .busca--input {
-  width: 200px;
-  font-size: 14px;
-}
-
-.busca--inline select {
-  width: 200px;
-}
-
-.busca--inline .busca--btn {
-  font-size: 14px;
-  margin: 0 20px;
+  color: #a8a8a8;
 }
 
 .call-to-action {
   color: firebrick;
   text-align: left;
-  margin: 50px 0;
 }
 
 .call-to-action p {
@@ -225,7 +179,20 @@ footer a {
   font-weight: bold;
 }
 
-.cta--dicio p, .cta--docs p {
+.cta--dicio {
+  text-align: center;
+}
+
+.cta--dicio p {
+  line-height: 1.25rem;
+}
+
+.cta--docs {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.cta--docs p {
   line-height: 1.25rem;
 }
 
@@ -250,8 +217,7 @@ footer a {
   line-height: 1.5rem;
 }
 
-.header {
-  padding: 60px 0;
+.home .header {
   background-image: url("../img/bg-code.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -259,7 +225,7 @@ footer a {
   opacity: .9;
 }
 
-.d-flex--header {
+.home .header .header--dflex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,9 +234,13 @@ footer a {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.apres--container {
+.home .header .header--dflex .apres--container {
   width: 40%;
   text-align: center;
   background-color: #fff;
@@ -279,16 +249,16 @@ footer a {
           box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.apres--container .apres--logo {
-  font-family: 'Special Elite', cursive;
+.home .header .header--dflex .apres--container .apres--logo {
+  font-family: "Special Elite", cursive;
   font-size: 26px;
 }
 
-.apres--container p {
+.home .header .header--dflex .apres--container p {
   margin-top: 15px;
 }
 
-.busca--container__home {
+.home .header .header--dflex .busca--container__home {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,7 +274,43 @@ footer a {
           flex-direction: column;
 }
 
-.conteudo {
+.home .header .header--dflex .busca--container__home .busca--campos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home .header .header--dflex .busca--container__home .busca--campos h3 {
+  margin: 20px;
+}
+
+.home .header .header--dflex .busca--container__home .busca--campos input {
+  width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  font-size: 14px;
+  padding: 5px 15px;
+}
+
+.home .header .header--dflex .busca--container__home .busca--campos select {
+  width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.home .conteudo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,9 +320,13 @@ footer a {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.conteudo--container {
+.home .conteudo .conteudo--container {
   width: 30%;
   min-height: 280px;
   display: -webkit-box;
@@ -335,175 +345,167 @@ footer a {
   position: relative;
 }
 
-.conteudo--container ul {
+.home .conteudo .conteudo--container ul {
   margin-bottom: 20px;
 }
 
-.conteudo--container li {
+.home .conteudo .conteudo--container ul li {
   margin: 5px 0 5px 30px;
 }
 
-.conteudo--container a {
+.home .conteudo .conteudo--container a {
   margin: 0 auto;
   position: absolute;
   bottom: 20px;
 }
 
-.conteudo--container .conteudo--dicio span {
-  color: rgba(0, 0, 0, 0.5);
+.home .conteudo .conteudo--container .conteudo--dicio span {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .artigo {
-  margin: 40px auto;
+  margin-bottom: 60px;
 }
 
-#texto-medium {
+.artigo .artigo--format {
   margin: 40px 0;
-  font-family: 'PT Serif', serif;
+  font-family: "PT Serif", serif;
 }
 
-#texto-medium p {
+.artigo .artigo--format p {
   margin: 20px 0;
   line-height: 1.5rem;
 }
 
-#texto-medium h2 {
+.artigo .artigo--format h2 {
   margin-bottom: 40px;
 }
 
-#texto-medium h3 {
+.artigo .artigo--format h3 {
   margin: 30px 0;
 }
 
-#texto-medium h4 {
+.artigo .artigo--format h4 {
   margin-top: 40px;
   font-size: 18px;
 }
 
-#texto-medium pre {
+.artigo .artigo--format pre {
   margin: 30px 40px;
   padding: 20px;
   background-color: #e6e6e6;
   line-height: 1.25rem;
 }
 
-#texto-medium figure {
+.artigo .artigo--format figure {
   margin: 30px 0;
   text-align: center;
 }
 
-#texto-medium figure img {
+.artigo .artigo--format figure img {
   width: 80%;
 }
 
-#texto-medium li {
+.artigo .artigo--format figure figcaption {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.artigo .artigo--format li {
   margin: 20px;
 }
 
-#texto-medium a {
+.artigo .artigo--format a {
   text-decoration: underline;
 }
 
-#texto-medium a:hover {
+.artigo .artigo--format a:hover {
   color: #63667e;
 }
 
-.link--voltar {
+.link--voltar, .link--topo {
   color: #63667e;
+  cursor: pointer;
 }
 
-.link--voltar:hover {
+.link--voltar:hover, .link--topo:hover {
   text-decoration: underline;
 }
 
-.dicio--container {
-  margin: 40px auto;
-  margin-bottom: 60px;
-  width: 75%;
-}
-
-.dicio--container .dicio--descricao {
+.dicionario .dicio--descricao {
   text-align: center;
 }
 
-.dicio--container .dicio--tabela {
-  margin: 50px auto;
+.dicionario .dicio--tabela {
+  margin: 60px auto;
   border-spacing: 0;
 }
 
-.dicio--container .dicio--tabela th, .dicio--container .dicio--tabela td {
+.dicionario .dicio--tabela th, .dicionario .dicio--tabela td {
   min-width: 150px;
   padding: 8px 20px;
 }
 
-.dicio--container .dicio--tabela th {
+.dicionario .dicio--tabela th {
   text-transform: uppercase;
   padding-bottom: 20px;
 }
 
-.dicio--container .dicio--tabela th span {
-  cursor: pointer;
-}
-
-.dicio--container .dicio--tabela td {
-  border-bottom: 1px solid #ccc;
-}
-
-.dicio--container .dicio--tabela .significado {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.dicio--container .dicio--tabela i {
+.dicionario .dicio--tabela th i {
   margin-left: 15px;
 }
 
-.docs--container {
-  margin: 40px auto;
+.dicionario .dicio--tabela th span {
+  cursor: pointer;
 }
 
-.docs--container .docs--descricao {
-  text-align: center;
+.dicionario .dicio--tabela td {
+  border-bottom: 1px solid #ccc;
 }
 
-.docs--lista {
-  margin: 50px 20px;
-}
-
-.docs--lista p {
-  margin: 10px 0;
-}
-
-.docs--lista li {
-  margin: 10px 0;
-}
-
-.docs--lista li a:hover {
-  color: #63667e;
-}
-
-.busca {
-  margin: 40px auto;
-}
-
-.artigos--container {
-  margin: 40px 0;
-}
-
-.item-lista {
-  margin-bottom: 20px;
-}
-
-.item-lista p {
-  font-size: 15px;
-  margin: 5px 0;
-}
-
-.item-lista:hover {
+.dicionario .dicio--tabela .significado {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.busca--container__artigos {
+.docs .docs--descricao {
+  text-align: center;
+}
+
+.docs .docs--lista {
+  margin: 50px 20px;
+}
+
+.docs .docs--lista p {
+  margin: 10px 0;
+}
+
+.docs .docs--lista li {
+  margin: 10px 0;
+}
+
+.docs .docs--lista li a:hover {
+  color: #63667e;
+}
+
+.artigos .busca--container__artigos {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.artigos .busca--container__artigos .busca--form {
+  font-size: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -513,9 +515,65 @@ footer a {
   -webkit-box-pack: none;
       -ms-flex-pack: none;
           justify-content: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.busca--container__artigos button {
+.artigos .busca--container__artigos .busca--form h3 {
+  margin: 20px;
+}
+
+.artigos .busca--container__artigos .busca--form .busca--input {
+  width: 250px;
+  font-size: 14px;
+  margin-right: 20px;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  padding: 5px 15px;
+}
+
+.artigos .busca--container__artigos .busca--form .busca--input input {
+  border: none;
+  font-size: 14px;
+  width: 90%;
+}
+
+.artigos .busca--container__artigos .busca--form .busca--input input:focus {
+  outline: none;
+}
+
+.artigos .busca--container__artigos .busca--form .busca--input button {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  margin-top: 4.5px;
+  cursor: pointer;
+}
+
+.artigos .busca--container__artigos .busca--form .busca--input button i {
+  font-size: 18px;
+  color: #b8b8b8;
+}
+
+.artigos .busca--container__artigos .busca--form select {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  font-size: 14px;
+}
+
+.artigos .busca--container__artigos .busca--form select:focus {
+  outline: none;
+}
+
+.artigos .busca--container__artigos .btn--vertodos {
   border: none;
   background: transparent;
   color: #63667e;
@@ -523,8 +581,30 @@ footer a {
   font-size: 15px;
 }
 
-.busca--container__artigos button:hover {
+.artigos .busca--container__artigos .btn--vertodos:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.artigos .busca--resultado {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.artigos .artigos--container {
+  margin: 40px auto;
+}
+
+.artigos .artigos--container .artigos--item {
+  margin-bottom: 25px;
+}
+
+.artigos .artigos--container .artigos--item p {
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.artigos .artigos--container .artigos--item:hover {
+  color: rgba(0, 0, 0, 0.6);
 }
 /*# sourceMappingURL=style.css.map */

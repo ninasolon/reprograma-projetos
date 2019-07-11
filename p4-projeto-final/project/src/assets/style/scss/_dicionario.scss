@@ -1,14 +1,11 @@
-.dicio--container {
-  margin: 40px auto;
-  margin-bottom: 60px;
-  width: 75%;
+.dicionario {
 
   .dicio--descricao {
     text-align: center;
   }
 
   .dicio--tabela {
-    margin: 50px auto;
+    margin: 60px auto;
     border-spacing: 0;
 
     th, td {
@@ -20,21 +17,21 @@
       text-transform: uppercase;
       padding-bottom: 20px;
 
+      i {
+        margin-left: 15px;
+      }
+
       span {
         cursor: pointer;
       }
     }
 
     td {
-      border-bottom: 1px solid #ccc;
+      border-bottom: $border;
     }
 
     .significado {
-      color: rgba(0,0,0,.6);
-    }
-
-    i {
-      margin-left: 15px;
+      color: $color-secondary;
     }
   }
 }

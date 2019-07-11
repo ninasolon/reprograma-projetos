@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Apresentacao from '../components/home/Apresentacao'
-import CampoBusca from '../components/CampoBusca'
+import BuscaHome from '../components/home/BuscaHome'
 import Conteudo from '../components/home/Conteudo'
 import ListaDicionario from '../components/home/ListaDicionario'
 import ListaDocs from '../components/home/ListaDocs'
@@ -24,13 +24,13 @@ export default class Home extends Component{
     } 
     
     else if (busca.palavra !== '' && busca.categoria !== ''){
-      alert('Por favor, utilize somente um dos campos para busca')
+      alert('Por favor, utilize somente um dos campos de busca')
     }
     
     else {
       localStorage.setItem('BUSCA', busca.palavra)
       localStorage.setItem('CATEGORIA', busca.categoria)
-      this.props.history.push('/busca')
+      this.props.history.push('/artigos')
     }
   }
 
@@ -38,23 +38,22 @@ export default class Home extends Component{
     return (
       <div className='home'>
         <header className='header'>
-          <div className='container d-flex--header'>
+          <div className='container header--dflex'>
             <Apresentacao />
             <div className='busca--container__home'>
-              <CampoBusca 
-                classe='busca--campos'
+              <BuscaHome 
                 btnBusca={this.btnBusca}
                 refBusca={(e) => this.inputBusca = e}
                 refCategoria={(e) => this.inputCategoria = e}
               />
-              <Link to='/busca'>Ver todos os artigos</Link>
+              <Link to='/artigos'>Ver todos os artigos</Link>
             </div>
           </div>
         </header>
         <section className='container conteudo'>
           <Conteudo
             secao='< dicionário />'
-            descricao={'Saiba o siginifcado de algumas palavras usadas na programação:'}
+            descricao={'Saiba o siginificado de alguns termos usados na programação:'}
             lista={<ListaDicionario/>}
             link='/dicionario'
           />

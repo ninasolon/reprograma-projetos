@@ -1,0 +1,40 @@
+//color
+$black: #000;
+$white: #fff;
+$purple: #3c4063;
+$light-purple: #63667e;
+// $light-purple: #6B72B0;
+// $light-purple: #676d96;
+// $light-purple: #5d6397;
+$yellow: #ffde5d;
+$light-gray: rgba(0,0,0,0.6);
+$dark-gray: rgba(0,0,0,0.75);
+$light-grey: #e6e6e6;
+$dark-grey: #575757;
+
+$color-primary: $black;
+$color-secondary: $light-gray;
+$color-title: $purple;
+$color-link: $light-purple;
+$color-btn: $dark-gray;
+$color-bg: $white;
+$color-bg-secondary: $yellow;
+$color-bg-footer: $dark-grey;
+$color-bg-code: $light-grey;
+
+//font-family
+$font-primary: 'Lato', sans-serif;
+$font-title: 'Raleway', sans-serif;
+$font-article: 'PT Serif', serif;
+$font-logo: 'Special Elite', cursive;
+
+//font-size
+$fsize-default: 16px;
+$fsize-smaller: 15px;
+$fsize-article-subtitle: 18px;
+$fsize-input: 14px;
+$fsize-logo: 28px;
+
+//extra
+$box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+$border: 1px solid #ccc;

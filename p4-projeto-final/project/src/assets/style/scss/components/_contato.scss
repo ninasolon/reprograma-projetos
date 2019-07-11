@@ -1,13 +1,13 @@
 .contato {
   text-align: center;
-  background-color: #ffde5d;
-}
+  background-color: $color-bg-secondary;
 
-.contato--container{
-  margin-top: 35px;
-  @include flex(center, none);
-}
-
-.contato--flex {
-  width: 50%;
+  .contato--container{
+    margin-top: 35px;
+    @include flex(center, none, row);
+  
+    .contato--flex {
+      width: 50%;
+    }
+  }
 }

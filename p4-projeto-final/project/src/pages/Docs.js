@@ -12,7 +12,7 @@ export default class Docs extends Component {
     return (
       <div>
         < ImgHeader />
-        <div className='container docs--container'>
+        <div className='container page-container docs'>
           <h2>{"< documentações />"}</h2>
           <p className='docs--descricao'>Algumas documentações oficiais já possuem versão em português. Acesse os links abaixo:</p>
           <ul className='docs--lista'>
