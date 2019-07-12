@@ -181,18 +181,18 @@ body input:focus, body select:focus, body button:focus {
 
 .dropdown {
   display: block;
-  font-size: 18px;
+  font-size: 20px;
   list-style: none;
   text-align: right;
 }
 
 .dropdown .dropdown--link {
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 .dropdown .dropdown--colabore {
   color: #60679c;
-  padding: 5px 0 10px 0;
+  padding: 10px 0 20px 0;
 }
 
 .contato {

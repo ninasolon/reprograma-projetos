@@ -8,8 +8,8 @@ export default function Contato(){
         <div className='contato--container'>
           <div className='contato--flex'>
             <h3>como funciona</h3>
-            <p>O <span>debug</span> faz uma curadoria de conteúdos relevantes sobre tecnologia, escritos em inglês, para serem traduzidos e disponibilizados no site.</p>
-            <p>A ideia é formar um coletivo de tradutores para ampliar o material disponível em português sobre em programação e áreas afins.</p>  
+            <p>O <span>debug</span> faz uma curadoria de conteúdos em inglês sobre tecnologia, para serem traduzidos e disponibilizados no site.</p>
+            <p>A ideia é formar um coletivo de tradutores para ampliar o material disponível em português sobre programação e outras áreas.</p>  
           </div>
           <div className='contato--flex'>
             <h3>contato</h3>
