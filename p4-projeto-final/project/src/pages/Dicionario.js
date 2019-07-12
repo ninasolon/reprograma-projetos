@@ -14,7 +14,7 @@ export default class Dicionario extends Component{
         < ImgHeader />
         <div className='container page-container dicionario'>
           <h2>{"< dicionário />"}</h2>
-          <p className='dicio--descricao'>Consulte a tradução e o significado de palavras frequentemente usadas em programação:</p>
+          <p className='dicio--descricao'></p>
           < TabelaDicionario />
           < CtaDicionario />
         </div>

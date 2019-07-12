@@ -1,26 +1,29 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
-// import MenuDropdown from '../components/nav/MenuDropdown'
+import MenuDropdown from '../components/nav/MenuDropdown'
 
 export default class Nav extends Component{
   constructor(props){
     super(props);
     this.state = {
-      classeMenu: 'dropdown-inativo',
+      dropdown: false,
     }
   }
 
-  menuDropdown=()=>{
-    //checar toggle
-    if(this.state.classeMenu==='dropdown-inativo'){
-      this.setState({
-        classeMenu: 'dropdown-ativo'
-      })
+  menuDropdown=()=>{ 
+    if (!this.state.dropdown) {
+      document.addEventListener('click', this.outsideClick, false);
     } else {
-      this.setState({
-        classeMenu: 'dropdown-inativo'
-      })
+      document.removeEventListener('click', this.outsideClick, false);
     }
+    this.setState(prevState=>({ dropdown: !prevState.dropdown }))
+  }
+
+  outsideClick=(e)=>{
+    if (this.node.contains(e.target)) {
+      return;
+    }
+    this.menuDropdown();
   }
 
   render(){
@@ -40,13 +43,9 @@ export default class Nav extends Component{
           </ul>
           <div className='navmenu--hamburguer' onClick={this.menuDropdown}><i class="fas fa-bars"></i></div>
         </div>
-        <ul className={`container ${this.state.classeMenu}`}>
-          <li className='dropdown--link' onClick={this.menuDropdown}><Link to='/'>home</Link></li>
-          <li className='dropdown--link' onClick={this.menuDropdown}><Link to='/artigos'>artigos</Link></li>
-          <li className='dropdown--link' onClick={this.menuDropdown}><Link to='/dicionario'>dicionário</Link></li>
-          <li className='dropdown--link' onClick={this.menuDropdown}><Link to='/documentacoes'>documentações</Link></li>
-          <li className='dropdown--colabore' onClick={this.menuDropdown}><a href='#contato'>colabore</a></li>
-        </ul>
+        <div id='menuDropdown' ref={node => { this.node = node }}>
+          {this.state.dropdown && <MenuDropdown click={this.menuDropdown}/>}
+        </div>
       </nav>
     )
   }

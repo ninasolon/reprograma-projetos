@@ -23,10 +23,11 @@ export default class Artigos extends Component {
     const dadosCategoria = localStorage.getItem('CATEGORIA')
 
     if(dadosBusca !== '' && dadosCategoria === ''){
-      let filtroBusca = dataArtigos.filter((item) => {
-        return item.titulo.toLowerCase().includes(dadosBusca.toLowerCase());
-      })
 
+      let filtroBusca = dataArtigos.filter((item) => {
+        let itensBusca = item.titulo.toLowerCase() + item.keywords.toLowerCase();
+        return itensBusca.includes(dadosBusca.toLowerCase());
+      })
       if(filtroBusca.length>0){
         this.setState({
           article: < ListaArtigos array={filtroBusca}/>,
@@ -36,15 +37,14 @@ export default class Artigos extends Component {
           article: < CtaSemResultado />,
         })
       }
-
       document.getElementById('resultadoBusca').innerText = `${filtroBusca.length} resultado(s) para "${dadosBusca}"`
     } 
 
     else if (dadosCategoria !== '' && dadosBusca === '') {
       let filtroBusca = dataArtigos.filter((item) => {
-        return item.titulo.toLowerCase().includes(dadosCategoria.toLowerCase());
+        let itensBusca = item.titulo.toLowerCase() + item.keywords.toLowerCase();
+        return itensBusca.includes(dadosCategoria.toLowerCase());
       })
-
       if(filtroBusca.length>0){
         this.setState({
           article: < ListaArtigos array={filtroBusca}/>,
@@ -54,13 +54,16 @@ export default class Artigos extends Component {
           article: < CtaSemResultado />,
         })
       }
-
       document.getElementById('resultadoBusca').innerText = `${filtroBusca.length} resultado(s) para "${dadosCategoria}"`
     }
     
     else {
       this.state = {
         article: <ListaArtigos array={dataArtigos}/>,
+        busca: {
+          categoria: '',
+          palavra: '', 
+        }
       }
     }
     localStorage.clear()
@@ -82,7 +85,8 @@ export default class Artigos extends Component {
       categoria: this.inputCategoria.value
     }
     let filtroBusca = dataArtigos.filter((item) => {
-      return item.titulo.toLowerCase().includes(busca.categoria.toLowerCase());
+      let itensBusca = item.titulo.toLowerCase() + item.keywords.toLowerCase();
+      return itensBusca.includes(busca.categoria.toLowerCase());
     })
     if(filtroBusca.length>0){
       this.setState({
@@ -95,7 +99,7 @@ export default class Artigos extends Component {
     }
     document.getElementById('resultadoBusca').innerHTML = `${filtroBusca.length} resultado(s) para "${busca.categoria}"`
     this.setState({
-      busca: { categoria:'' },
+      busca: { categoria:'', palavra:'', },
     })
   }
 
@@ -111,10 +115,8 @@ export default class Artigos extends Component {
     
     else {
       let filtroBusca = dataArtigos.filter((item) => {
-
         let itensBusca = item.titulo.toLowerCase() + item.keywords.toLowerCase();
         return itensBusca.includes(busca.palavra.toLowerCase());
-
       })
 
       if(filtroBusca.length>0){

@@ -2,23 +2,32 @@
 
   .dicio--descricao {
     text-align: center;
+
+    
+  }
+
+  .dicio--descricao::before{
+    content: 'Consulte a tradução e o significado de palavras frequentemente usadas em programação:';
+
+    @media (max-width:$mobile){
+      content: 'Consulte a tradução de palavras frequentemente usadas em programação:'
+    }
   }
 
   .dicio--tabela {
     margin: 60px auto;
     border-spacing: 0;
 
+    @media (max-width:$mobile){
+      margin: 40px auto;
+    }
+
     th, td {
       min-width: 150px;
-      padding: 8px 20px;
+      padding: 8px 15px;
 
       @media (max-width:$tablet-hor){
         min-width: unset;
-        padding: 8px 10px;
-      }
-
-      @media (max-width:$tablet-ver){
-        padding: 8px 5px;
       }
     }
 
@@ -27,11 +36,7 @@
       padding-bottom: 20px;
 
       i {
-        margin-left: 15px;
-
-        @media (max-width:$tablet-hor){
-          margin-left: 5px;
-        }
+        margin-left: 10px;
       }
 
       span {
@@ -44,6 +49,11 @@
     }
 
     .th--significado{
+
+      @media (max-width:$tablet-hor){
+        width: 60%;
+      }
+
       @media (max-width:$mobile){
         display: none;
       }
@@ -51,6 +61,10 @@
 
     .significado {
       color: $color-secondary;
+
+      @media (max-width:$tablet-hor){
+        width: 60%;
+      }
 
       @media (max-width:$mobile){
         display: none;

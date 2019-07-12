@@ -7,7 +7,7 @@ import Home from './pages/Home'
 import Artigos from './pages/Artigos'
 import Dicionario from './pages/Dicionario'
 import Docs from './pages/Docs'
-import Artigo from './pages/Artigo'
+import Conteudo from './pages/Conteudo'
 
 //componentes
 import Nav from './components/Nav'
@@ -23,7 +23,7 @@ export default function App() {
         <Route path='/artigos' component={Artigos} />
         <Route path='/dicionario' component={Dicionario} />
         <Route path='/documentacoes' component={Docs} />
-        <Route path='/artigo/:id' component={Artigo} />
+        <Route path='/conteudo/:id' component={Conteudo} />
         <Contato />
         <Footer />
       </div>

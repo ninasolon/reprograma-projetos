@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import ImgHeader from '../components/ImgHeader'
 import { Link } from 'react-router-dom'
 
-export default class Artigo extends Component {
+export default class Conteudo extends Component {
+  componentDidMount(){
+    window.scrollTo(0, 0);
+  }
+  
   render(){
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40debugtraducao')
     .then((res) => res.json())

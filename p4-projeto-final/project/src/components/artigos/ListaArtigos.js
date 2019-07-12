@@ -15,7 +15,7 @@ export default class ListaArtigos extends Component{
     const listaOrdenada = (this.props.array).sort((itemA, itemB) => this.ordenarAZ(itemA, itemB, 'titulo'))
     return (
       listaOrdenada.map((item) => (
-      <Link to={`/artigo/${item.index}`}>
+      <Link to={`/conteudo/${item.index}`}>
         <div className='artigos--item'>
           <h4>{item.titulo}</h4>
           <p>{item.descricao}</p>

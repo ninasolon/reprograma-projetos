@@ -8,11 +8,13 @@ export default function Contato(){
         <div className='contato--container'>
           <div className='contato--flex'>
             <h3>como funciona</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium obcaecati voluptatum, ad tenetur placeat sed. Saepe, accusantium vero. Sint nam voluptatem totam ullam officia odio amet laboriosam possimus vel. Atque!</p>  
+            <p>O <span>debug</span> faz uma curadoria de conteúdos relevantes sobre tecnologia, escritos em inglês, para serem traduzidos e disponibilizados no site.</p>
+            <p>A ideia é formar um coletivo de tradutores para ampliar o material disponível em português sobre em programação e áreas afins.</p>  
           </div>
           <div className='contato--flex'>
-            <p>Slack</p>
-            <p>E-mail</p>
+            <h3>contato</h3>
+            <p>Junte-se ao nosso grupo no <a href='https://bit.ly/2G9XVgJ' target='_blank'>Slack</a>, onde organizamos o fluxo de traduções e material para entrar no site.</p>
+            <p>Ou entre em contato pelo e-mail <a href='mailto:debugtraducao@gmail.com'>debugtraducao@gmail.com</a>. Você pode solicitar traduções ou enviar artigos traduzidos e outras sugestões de conteúdo para o site.</p>
           </div>
         </div>
       </div>

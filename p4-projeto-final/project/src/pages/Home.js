@@ -12,7 +12,7 @@ export default class Home extends Component{
     window.scrollTo(0, 0);
   }
 
-  btnBusca = (e) => {
+  btnBusca=(e)=>{
     e.preventDefault();
     const busca = {
       palavra: this.inputBusca.value,

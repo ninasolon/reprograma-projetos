@@ -3,9 +3,6 @@ $black: #000;
 $white: #fff;
 $purple: #3c4063;
 $light-purple: #63667e;
-// $light-purple: #6B72B0;
-// $light-purple: #676d96;
-// $light-purple: #5d6397;
 $yellow: #ffde5d;
 $light-gray: rgba(0,0,0,0.6);
 $dark-gray: rgba(0,0,0,0.75);
@@ -31,8 +28,8 @@ $font-logo: 'Special Elite', cursive;
 //font-size
 $fsize-default: 16px;
 $fsize-smaller: 15px;
-$fsize-article-subtitle: 18px;
 $fsize-input: 14px;
+$fsize-article-subtitle: 18px;
 $fsize-logo: 28px;
 
 //extra
@@ -40,6 +37,6 @@ $box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 $border: 1px solid #ccc;
 
 //breakpoints
-$mobile: 420px;
+$mobile: 500px;
 $tablet-ver: 768px;
 $tablet-hor: 1024px;

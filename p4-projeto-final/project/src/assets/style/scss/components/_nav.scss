@@ -4,6 +4,12 @@
   background-color: $color-bg;
   padding: 18px 0;
 
+  p{
+    @media (max-width:$mobile){
+      font-size: $fsize-smaller;
+    }
+  }
+
   .navmenu{
     p {
       font-weight: 300;
@@ -37,6 +43,7 @@
   .navmenu--hamburguer {
     display: none;
     font-size: 36px;
+    color: $color-bg-footer;
 
     @media (max-width:$tablet-ver){
       display: block;
@@ -44,11 +51,7 @@
   }
 }
 
-.dropdown-inativo {
-  display: none;
-}
-
-.dropdown-ativo {
+.dropdown {
   display: block;
   font-size: 18px;
   list-style: none;

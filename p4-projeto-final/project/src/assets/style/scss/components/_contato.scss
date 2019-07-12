@@ -2,19 +2,40 @@
   text-align: center;
   background-color: $color-bg-secondary;
 
+  a {
+    color: $color-bg-footer;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
   .contato--container{
     margin-top: 35px;
-    @include flex(center, none, row);
+    @include flex(flex-start, space-between, row);
 
     @media (max-width:$tablet-ver){
       flex-direction: column;
     }
   
     .contato--flex {
-      width: 50%;
+      text-align: left;
+      width: 47%;
 
       @media (max-width:$tablet-ver){
        width: 100%;
+      }
+
+      h3{
+        text-align: left;
+      }
+      p{
+        margin: 10px 0;
+
+        span{
+          font-family: $font-logo;
+          font-weight: bold;
+        }
       }
     }
   }

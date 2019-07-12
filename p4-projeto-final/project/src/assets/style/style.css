@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .home .header .header--dflex .busca--container__home .busca--campos .busca--btn {
   font-family: "Lato", sans-serif;
   font-size: 16px;
@@ -56,6 +57,12 @@ body section, body header {
   padding: 60px 0;
 }
 
+@media (max-width: 500px) {
+  body section, body header {
+    padding: 45px 0;
+  }
+}
+
 body .container {
   margin: 0 auto;
   width: 75%;
@@ -92,9 +99,10 @@ body .header-img {
   opacity: .4;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   body .header-img {
-    display: none;
+    background-size: 250%;
+    background-position: top;
   }
 }
 
@@ -120,6 +128,12 @@ body input:focus, body select:focus, body button:focus {
           flex-direction: row;
   background-color: #fff;
   padding: 18px 0;
+}
+
+@media (max-width: 500px) {
+  .nav p {
+    font-size: 15px;
+  }
 }
 
 .nav .navmenu p {
@@ -155,6 +169,7 @@ body input:focus, body select:focus, body button:focus {
 .nav .navmenu--hamburguer {
   display: none;
   font-size: 36px;
+  color: #575757;
 }
 
 @media (max-width: 768px) {
@@ -163,22 +178,18 @@ body input:focus, body select:focus, body button:focus {
   }
 }
 
-.dropdown-inativo {
-  display: none;
-}
-
-.dropdown-ativo {
+.dropdown {
   display: block;
   font-size: 18px;
   list-style: none;
   text-align: right;
 }
 
-.dropdown-ativo .dropdown--link {
+.dropdown .dropdown--link {
   padding: 5px 0;
 }
 
-.dropdown-ativo .dropdown--colabore {
+.dropdown .dropdown--colabore {
   color: #63667e;
   padding: 5px 0 10px 0;
 }
@@ -188,17 +199,25 @@ body input:focus, body select:focus, body button:focus {
   background-color: #ffde5d;
 }
 
+.contato a {
+  color: #575757;
+}
+
+.contato a:hover {
+  text-decoration: underline;
+}
+
 .contato .contato--container {
   margin-top: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -215,13 +234,27 @@ body input:focus, body select:focus, body button:focus {
 }
 
 .contato .contato--container .contato--flex {
-  width: 50%;
+  text-align: left;
+  width: 47%;
 }
 
 @media (max-width: 768px) {
   .contato .contato--container .contato--flex {
     width: 100%;
   }
+}
+
+.contato .contato--container .contato--flex h3 {
+  text-align: left;
+}
+
+.contato .contato--container .contato--flex p {
+  margin: 10px 0;
+}
+
+.contato .contato--container .contato--flex p span {
+  font-family: "Special Elite", cursive;
+  font-weight: bold;
 }
 
 footer {
@@ -237,33 +270,33 @@ footer a {
 
 .call-to-action {
   color: firebrick;
-  text-align: left;
 }
 
 .call-to-action p {
   margin: 10px 0;
   font-size: 15px;
+  line-height: 1.5rem;
 }
 
 .call-to-action p span {
   font-weight: bold;
 }
 
-.cta--dicio {
-  text-align: center;
+.call-to-action a {
+  font-style: italic;
 }
 
-.cta--dicio p {
-  line-height: 1.25rem;
+.cta--dicio, .cta--docs {
+  text-align: center;
+  margin: 0 auto;
 }
 
 .cta--docs {
-  text-align: center;
   margin-top: 60px;
 }
 
-.cta--docs p {
-  line-height: 1.25rem;
+.cta--textos {
+  text-align: left;
 }
 
 .cta--textos p {
@@ -295,6 +328,12 @@ footer a {
   opacity: .9;
 }
 
+@media (max-width: 1024px) {
+  .home .header {
+    background-position: -600px;
+  }
+}
+
 @media (max-width: 768px) {
   .home .header {
     background-position: center;
@@ -316,6 +355,14 @@ footer a {
           flex-direction: row;
 }
 
+@media (max-width: 1024px) {
+  .home .header .header--dflex {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 @media (max-width: 768px) {
   .home .header .header--dflex {
     -webkit-box-orient: vertical;
@@ -334,6 +381,12 @@ footer a {
           box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 1024px) {
+  .home .header .header--dflex .apres--container {
+    width: 50%;
+  }
+}
+
 @media (max-width: 768px) {
   .home .header .header--dflex .apres--container {
     width: 60%;
@@ -341,7 +394,7 @@ footer a {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   .home .header .header--dflex .apres--container {
     width: 100%;
   }
@@ -354,6 +407,10 @@ footer a {
 
 .home .header .header--dflex .apres--container p {
   margin-top: 15px;
+}
+
+.home .header .header--dflex .apres--container p span {
+  font-weight: bold;
 }
 
 .home .header .header--dflex .busca--container__home {
@@ -383,7 +440,7 @@ footer a {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   .home .header .header--dflex .busca--container__home {
     width: 100%;
   }
@@ -441,6 +498,13 @@ footer a {
           flex-direction: row;
 }
 
+@media (max-width: 1024px) {
+  .home .conteudo {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 @media (max-width: 768px) {
   .home .conteudo {
     -webkit-box-orient: vertical;
@@ -469,13 +533,19 @@ footer a {
   position: relative;
 }
 
+@media (max-width: 1024px) {
+  .home .conteudo .conteudo--container {
+    width: 40%;
+  }
+}
+
 @media (max-width: 768px) {
   .home .conteudo .conteudo--container {
     width: 60%;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   .home .conteudo .conteudo--container {
     width: 80%;
   }
@@ -590,26 +660,35 @@ footer a {
   text-align: center;
 }
 
+.dicionario .dicio--descricao::before {
+  content: 'Consulte a tradução e o significado de palavras frequentemente usadas em programação:';
+}
+
+@media (max-width: 500px) {
+  .dicionario .dicio--descricao::before {
+    content: 'Consulte a tradução de palavras frequentemente usadas em programação:';
+  }
+}
+
 .dicionario .dicio--tabela {
   margin: 60px auto;
   border-spacing: 0;
 }
 
+@media (max-width: 500px) {
+  .dicionario .dicio--tabela {
+    margin: 40px auto;
+  }
+}
+
 .dicionario .dicio--tabela th, .dicionario .dicio--tabela td {
   min-width: 150px;
-  padding: 8px 20px;
+  padding: 8px 15px;
 }
 
 @media (max-width: 1024px) {
   .dicionario .dicio--tabela th, .dicionario .dicio--tabela td {
     min-width: unset;
-    padding: 8px 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .dicionario .dicio--tabela th, .dicionario .dicio--tabela td {
-    padding: 8px 5px;
   }
 }
 
@@ -619,13 +698,7 @@ footer a {
 }
 
 .dicionario .dicio--tabela th i {
-  margin-left: 15px;
-}
-
-@media (max-width: 1024px) {
-  .dicionario .dicio--tabela th i {
-    margin-left: 5px;
-  }
+  margin-left: 10px;
 }
 
 .dicionario .dicio--tabela th span {
@@ -636,7 +709,13 @@ footer a {
   border-bottom: 1px solid #ccc;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 1024px) {
+  .dicionario .dicio--tabela .th--significado {
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
   .dicionario .dicio--tabela .th--significado {
     display: none;
   }
@@ -646,7 +725,13 @@ footer a {
   color: rgba(0, 0, 0, 0.6);
 }
 
-@media (max-width: 420px) {
+@media (max-width: 1024px) {
+  .dicionario .dicio--tabela .significado {
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
   .dicionario .dicio--tabela .significado {
     display: none;
   }
@@ -798,13 +883,19 @@ footer a {
   border: none;
   background: transparent;
   color: #63667e;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 15px;
 }
 
 @media (max-width: 768px) {
   .artigos .busca--container__artigos .btn--vertodos {
     margin-top: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .artigos .busca--container__artigos .btn--vertodos {
+    font-size: 16px;
   }
 }
 

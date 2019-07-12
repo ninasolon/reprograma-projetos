@@ -32,6 +32,10 @@ body {
   
   section, header {
     padding: 60px 0;
+
+    @media (max-width:$mobile){
+    padding: 45px 0;
+    }
   }
   
   .container {
@@ -62,9 +66,9 @@ body {
     filter: grayscale(60%);
     opacity: .4;
 
-    @media (max-width:$tablet-ver){
-      //arrumar background
-      display: none;
+    @media (max-width:$mobile){
+      background-size: 250%;
+      background-position: top;
     }
   }
   
