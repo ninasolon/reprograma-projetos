@@ -38,7 +38,7 @@ export default class Home extends Component{
     return (
       <div className='home'>
         <header className='header'>
-          <div className='container header--dflex'>
+          <div className='header--dflex'>
             <Apresentacao />
             <div className='busca--container__home'>
               <BuscaHome 

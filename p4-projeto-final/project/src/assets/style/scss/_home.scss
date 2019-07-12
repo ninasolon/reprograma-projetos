@@ -13,20 +13,6 @@
   }
 
   .header {
-    background-image: url('../img/bg-code.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: -800px;
-    opacity: .9;
-
-    @media (max-width:$tablet-hor){
-      background-position: -600px;;
-    }
-
-    @media (max-width:$tablet-ver){
-      background-position: center;
-    }
-
     .header--dflex {
       @include flex(center, space-around, row);
 
@@ -38,49 +24,68 @@
         flex-direction: column;
       }
 
-      .apres--container {
-        width: 40%;
-        text-align: center;
-        background-color: $color-bg;
-        padding: 40px 30px;
-        box-shadow: $box-shadow;
-
-        @media (max-width:$tablet-hor){
-          width: 50%;
-        }
-
+      .apres--container{
+        width: 42%;
+        background-image: url('../img/bg-code.jpg');
+        background-size: 220%;
+        background-position: right;
+        opacity: .9;
+    
         @media (max-width:$tablet-ver){
-          width: 60%;
-          padding: 30px;
-        }
-
-        @media (max-width:$mobile){
+          background-position: center;
           width: 100%;
         }
-      
-        .apres--logo{
-          font-family: $font-logo;
-          font-size: 26px;
-        }
-      
-        p{
-          margin-top: 15px;
 
-          span{
-            font-weight: bold;
+        .apres--card {
+          margin: 60px auto;
+          margin-right: -80px;
+          width: 72%;
+          text-align: center;
+          background-color: $color-bg;
+          padding: 40px 30px;
+          box-shadow: $box-shadow;
+  
+          @media (max-width:$tablet-hor){
+            width: 90%;
+          }
+  
+          @media (max-width:$tablet-ver){
+            margin: 60px auto;
+            margin-right: auto;
+            width: 60%;
+          }
+  
+          @media (max-width:$mobile){
+            margin: 50px auto;
+            width: 90%;
+            padding: 30px;
+          }
+        
+          .apres--logo{
+            font-family: $font-logo;
+            font-size: 26px;
+          }
+        
+          p{
+            margin-top: 15px;
+  
+            span{
+              font-weight: bold;
+            }
           }
         }
       }
 
       .busca--container__home{
+        width: 58%;
         @include flex(center, none, column);
 
         @media (max-width:$tablet-ver){
-          background-color: $color-bg;
+          // background-color: $color-bg;
           width: 60%;
           padding: 30px 0;
-          box-shadow: $box-shadow;
-          margin-top: 40px;          
+          // box-shadow: $box-shadow;
+          margin-top: 20px;          
         }
 
         @media (max-width:$mobile){

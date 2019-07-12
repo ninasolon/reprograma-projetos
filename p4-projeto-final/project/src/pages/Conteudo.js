@@ -28,7 +28,7 @@ export default class Conteudo extends Component {
             <Link to='/artigos' className='link--voltar'>{"<< voltar para artigos"}</Link>
           </div>
           <div id='artigo-medium' className='artigo--format'></div>
-          <a href='#' className='link--topo'>{"voltar ao topo"}</a>
+          <a href='#' className='link--topo'><i class="fas fa-chevron-circle-up"></i><span>topo</span></a>
         </div>
       </div>
     )

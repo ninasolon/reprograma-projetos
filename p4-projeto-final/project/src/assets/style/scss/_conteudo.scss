@@ -62,12 +62,26 @@
   }
 }
 
-.link--voltar, .link--topo{
+.link--voltar{
   color: $color-link;
-  cursor: pointer;
 }
 
-.link--voltar:hover, .link--topo:hover{
+.link--voltar:hover{
   text-decoration: underline;
+  color: $color-link;
+}
+
+.link--topo{
+  @include flex(center, unset, row);
+  color: $color-link;
+
+  i{
+    font-size: 32px;
+    margin-right: 5px;
+  }
+}
+
+.link--topo:hover{
+  color: $color-title;
 }
 

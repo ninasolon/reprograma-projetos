@@ -28,9 +28,11 @@ body {
   a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
   }
   
-  section, header {
+  // section, header {
+  section{
     padding: 60px 0;
 
     @media (max-width:$mobile){

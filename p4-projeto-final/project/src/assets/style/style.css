@@ -51,14 +51,15 @@ body h3 {
 body a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
-body section, body header {
+body section {
   padding: 60px 0;
 }
 
 @media (max-width: 500px) {
-  body section, body header {
+  body section {
     padding: 45px 0;
   }
 }
@@ -154,11 +155,11 @@ body input:focus, body select:focus, body button:focus {
 }
 
 .nav .navmenu .navmenu--link:hover {
-  color: #63667e;
+  color: #60679c;
 }
 
 .nav .navmenu .navmenu--colabore {
-  color: #63667e;
+  color: #60679c;
 }
 
 .nav .navmenu .navmenu--colabore:hover {
@@ -190,7 +191,7 @@ body input:focus, body select:focus, body button:focus {
 }
 
 .dropdown .dropdown--colabore {
-  color: #63667e;
+  color: #60679c;
   padding: 5px 0 10px 0;
 }
 
@@ -241,6 +242,7 @@ body input:focus, body select:focus, body button:focus {
 @media (max-width: 768px) {
   .contato .contato--container .contato--flex {
     width: 100%;
+    margin-bottom: 20px;
   }
 }
 
@@ -308,7 +310,7 @@ footer a {
 }
 
 .home a {
-  color: #63667e;
+  color: #60679c;
 }
 
 .home a:hover {
@@ -318,26 +320,6 @@ footer a {
 .home p {
   margin: 10px 0;
   line-height: 1.5rem;
-}
-
-.home .header {
-  background-image: url("../img/bg-code.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: -800px;
-  opacity: .9;
-}
-
-@media (max-width: 1024px) {
-  .home .header {
-    background-position: -600px;
-  }
-}
-
-@media (max-width: 768px) {
-  .home .header {
-    background-position: center;
-  }
 }
 
 .home .header .header--dflex {
@@ -373,7 +355,24 @@ footer a {
 }
 
 .home .header .header--dflex .apres--container {
-  width: 40%;
+  width: 42%;
+  background-image: url("../img/bg-code.jpg");
+  background-size: 220%;
+  background-position: right;
+  opacity: .9;
+}
+
+@media (max-width: 768px) {
+  .home .header .header--dflex .apres--container {
+    background-position: center;
+    width: 100%;
+  }
+}
+
+.home .header .header--dflex .apres--container .apres--card {
+  margin: 60px auto;
+  margin-right: -80px;
+  width: 72%;
   text-align: center;
   background-color: #fff;
   padding: 40px 30px;
@@ -382,38 +381,42 @@ footer a {
 }
 
 @media (max-width: 1024px) {
-  .home .header .header--dflex .apres--container {
-    width: 50%;
+  .home .header .header--dflex .apres--container .apres--card {
+    width: 90%;
   }
 }
 
 @media (max-width: 768px) {
-  .home .header .header--dflex .apres--container {
+  .home .header .header--dflex .apres--container .apres--card {
+    margin: 60px auto;
+    margin-right: auto;
     width: 60%;
-    padding: 30px;
   }
 }
 
 @media (max-width: 500px) {
-  .home .header .header--dflex .apres--container {
-    width: 100%;
+  .home .header .header--dflex .apres--container .apres--card {
+    margin: 50px auto;
+    width: 90%;
+    padding: 30px;
   }
 }
 
-.home .header .header--dflex .apres--container .apres--logo {
+.home .header .header--dflex .apres--container .apres--card .apres--logo {
   font-family: "Special Elite", cursive;
   font-size: 26px;
 }
 
-.home .header .header--dflex .apres--container p {
+.home .header .header--dflex .apres--container .apres--card p {
   margin-top: 15px;
 }
 
-.home .header .header--dflex .apres--container p span {
+.home .header .header--dflex .apres--container .apres--card p span {
   font-weight: bold;
 }
 
 .home .header .header--dflex .busca--container__home {
+  width: 58%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -431,12 +434,9 @@ footer a {
 
 @media (max-width: 768px) {
   .home .header .header--dflex .busca--container__home {
-    background-color: #fff;
     width: 60%;
     padding: 30px 0;
-    -webkit-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 
@@ -644,16 +644,42 @@ footer a {
 }
 
 .artigo .artigo--format a:hover {
-  color: #63667e;
+  color: #60679c;
 }
 
-.link--voltar, .link--topo {
-  color: #63667e;
-  cursor: pointer;
+.link--voltar {
+  color: #60679c;
 }
 
-.link--voltar:hover, .link--topo:hover {
+.link--voltar:hover {
   text-decoration: underline;
+  color: #60679c;
+}
+
+.link--topo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #60679c;
+}
+
+.link--topo i {
+  font-size: 32px;
+  margin-right: 5px;
+}
+
+.link--topo:hover {
+  color: #3c4063;
 }
 
 .dicionario .dicio--descricao {
@@ -754,7 +780,7 @@ footer a {
 }
 
 .docs .docs--lista li a:hover {
-  color: #63667e;
+  color: #60679c;
 }
 
 .artigos .busca--container__artigos {
@@ -882,7 +908,7 @@ footer a {
 .artigos .busca--container__artigos .btn--vertodos {
   border: none;
   background: transparent;
-  color: #63667e;
+  color: #60679c;
   font-family: "Lato", sans-serif;
   font-size: 15px;
 }
